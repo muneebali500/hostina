@@ -4,7 +4,7 @@ export default function createHeader() {
       <div class="main-container">
         <nav class="navbar navbar-expand-lg p-0">
           <!-- Logo on the left -->
-          <a class="navbar-brand d-flex align-items-center me-auto" href="#">
+          <a class="navbar-brand d-flex align-items-center me-auto" href="/">
             <img
               src="/images/logo.png"
               alt="Hostina Logo"
@@ -82,7 +82,7 @@ export default function createHeader() {
                 </ul>
               </li>
               <li class="nav-item px-3">
-                <a class="nav-link" href="./contact.html">Contact Us</a>
+                <a class="nav-link" href="/contact.html">Contact Us</a>
               </li>
               <li class="nav-item px-3">
                 <a class="nav-link" href="#">Help</a>
