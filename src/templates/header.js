@@ -82,7 +82,7 @@ export default function createHeader() {
                 </ul>
               </li>
               <li class="nav-item px-3">
-                <a class="nav-link" href="#">Contact Us</a>
+                <a class="nav-link" href="./contact.html">Contact Us</a>
               </li>
               <li class="nav-item px-3">
                 <a class="nav-link" href="#">Help</a>

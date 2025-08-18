@@ -5,15 +5,15 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        // Main site pages
-        "main-home": resolve(__dirname, "src/pages/main/index.html"),
-        "main-about": resolve(__dirname, "src/pages/main/about.html"),
+        main: resolve(__dirname, "index.html"), // This should be at project root
+        about: resolve(__dirname, "src/pages/main/about.html"),
+        contact: resolve(__dirname, "src/pages/main/contact.html"),
       },
     },
     outDir: "dist",
     emptyOutDir: true,
   },
   server: {
-    open: "/src/pages/main/index.html", // Auto-open main site
+    open: "/src/pages/main/index.html", // For dev server
   },
 });
