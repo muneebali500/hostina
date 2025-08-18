@@ -8,13 +8,6 @@ export default defineConfig({
         // Main site pages
         "main-home": resolve(__dirname, "src/pages/main/index.html"),
         "main-about": resolve(__dirname, "src/pages/main/about.html"),
-
-        // Dashboard pages
-        // "dashboard-home": resolve(__dirname, "src/pages/dashboard/index.html"),
-        // "dashboard-analytics": resolve(
-        //   __dirname,
-        //   "src/pages/dashboard/analytics.html"
-        // ),
       },
     },
     outDir: "dist",

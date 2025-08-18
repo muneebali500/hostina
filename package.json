@@ -10,9 +10,5 @@
   },
   "devDependencies": {
     "vite": "^7.1.2"
-  },
-  "dependencies": {
-    "fast-glob": "^3.3.3",
-    "glob": "^11.0.3"
   }
 }
