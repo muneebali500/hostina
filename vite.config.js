@@ -7,12 +7,25 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, "index.html"),
         contact: resolve(__dirname, "contact.html"),
+        blogs: resolve(__dirname, "blogs.html"),
+        login: resolve(__dirname, "login.html"),
+        domains: resolve(__dirname, "domains.html"),
+        hostingDetails: resolve(__dirname, "hosting-details.html"),
       },
     },
     outDir: "dist",
     emptyOutDir: true,
   },
   server: {
-    open: "/src/pages/main/index.html",
+    open: "index.html",
+    port: 3000,
+    host: true,
+    hmr: {
+      port: 3001,
+    },
+    watch: {
+      usePolling: true,
+      interval: 1000,
+    },
   },
 });

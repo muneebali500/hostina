@@ -1,0 +1,247 @@
+/*//////////////////// DOMAIN SEARCH SECTION ///////////////////////////*/
+/* //////////////////////////////////////////////////////////////////// */
+
+#domain-search .search-form-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#domain-search .domain-search-form {
+  margin-top: 3rem;
+}
+
+#domain-search .search-input-wrapper {
+  display: flex;
+  gap: 2rem;
+  overflow: hidden;
+  transition: var(--transition-base);
+  position: relative;
+}
+
+#domain-search .domain-input {
+  flex: 1;
+  padding: 1.8rem 4rem 1.8rem 2rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--color-primary);
+  background-color: #ebebebb2;
+  border-radius: var(--radius-16);
+  border: 1px solid #ebebebb2;
+}
+
+#domain-search .domain-input:focus {
+  border: 1px solid var(--color-primary);
+}
+
+#domain-search .domain-input::placeholder {
+  color: var(--color-text);
+  font-weight: 400;
+}
+
+#domain-search .search-input-wrapper i {
+  position: absolute;
+  top: 50%;
+  right: 1.4rem;
+  transform: translateY(-50%);
+}
+
+#domain-search .search-btn {
+  padding: 1.8rem 3rem;
+  background: var(--color-primary);
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-base);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  border-radius: var(--radius-16);
+  white-space: nowrap;
+}
+
+#domain-search .search-btn:hover {
+  background: #333333;
+  transform: translateY(-2px);
+}
+
+#domain-search .search-btn i {
+  font-size: 1.4rem;
+}
+
+/* Search Results */
+#domain-search .search-results {
+  margin-top: 4rem;
+}
+
+#domain-search .results-heading {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--color-primary);
+}
+
+#domain-search .results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+#domain-search .result-item {
+  background: white;
+  padding: 2rem;
+  border-radius: var(--radius-16);
+  box-shadow: var(--shadow-sm);
+  border: 2px solid #f1f3f4;
+  transition: var(--transition-base);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#domain-search .result-item:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+#domain-search .result-domain {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+#domain-search .result-price {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-secondary);
+}
+
+#domain-search .result-status {
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-16);
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+#domain-search .result-status.available {
+  background: #d4edda;
+  color: #155724;
+}
+
+#domain-search .result-status.unavailable {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/*//////////////////// POPULAR DOMAINS SECTION /////////////////////////*/
+/* //////////////////////////////////////////////////////////////////// */
+#popular-domains .domain-card {
+  background: white;
+  padding: 3rem 2rem;
+  border-radius: var(--radius-18);
+  box-shadow: var(--shadow-sm);
+  border: 2px solid #f1f3f4;
+  transition: var(--transition-base);
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+#popular-domains .domain-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-lg);
+}
+
+#popular-domains .domain-info {
+  margin-bottom: 2rem;
+}
+
+#popular-domains .domain-name {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+#popular-domains .domain-price {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+#popular-domains .domain-select-btn {
+  padding: 1.2rem 2rem;
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-16);
+  font-size: 1.4rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-base);
+  width: 100%;
+}
+
+#popular-domains .domain-select-btn:hover {
+  background: #333333;
+  transform: translateY(-2px);
+}
+
+#popular-domains .domain-card .ellipse {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #0000000f;
+}
+
+#popular-domains .domain-card .ellipse-1 {
+  top: -5rem;
+  right: -2rem;
+  width: 10rem;
+  height: 10rem;
+}
+
+#popular-domains .domain-card .ellipse-2 {
+  top: 3.4rem;
+  right: -3rem;
+  width: 5rem;
+  height: 5rem;
+}
+
+/*//////////////////// CHOICE  SECTION /////////////////////////*/
+/* //////////////////////////////////////////////////////////////////// */
+.why-choose-us {
+  background: var(--color-light-gray);
+}
+
+.feature-content {
+  flex: 1;
+}
+
+.feature-description {
+  color: var(--color-text);
+  margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+  #domain-search .domain-search-form {
+    display: block !important;
+  }
+
+  #domain-search .search-input-wrapper {
+    flex-direction: column;
+  }
+
+  #domain-search .search-btn {
+    width: 100%;
+  }
+
+  #domain-search .domain-input {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}

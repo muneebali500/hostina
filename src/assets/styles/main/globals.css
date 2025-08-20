@@ -8,6 +8,7 @@
   /* Custom Colors */
   --color-primary: #000000;
   --color-text: #a7a7a7;
+  --color-light-gray: #f6f6f6;
   --color-secondary: #28a745;
 
   --radius-16: 16px;
@@ -56,6 +57,16 @@ img.cover {
   width: 100%;
   object-position: center;
   object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input {
+  border: none;
+  outline: none;
 }
 
 ul,
@@ -109,6 +120,31 @@ section {
 .description {
   font-size: 2.2rem;
   line-height: 1.5;
+  color: var(--color-text);
+}
+
+.btn {
+  border: none;
+  outline: none;
+  display: inline;
+  width: inherit;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* ///////////////////////// UTILITY CLASSES ///////////////////// */
+.clr-text {
   color: var(--color-text);
 }
 
