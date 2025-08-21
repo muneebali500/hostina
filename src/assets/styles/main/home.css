@@ -2,7 +2,7 @@
 /* /////////////////////////////////////////////////////// */
 #hero-home {
   min-height: 800px;
-  background-color: #000000;
+  background-color: var(--color-primary);
   position: relative;
 }
 
@@ -217,7 +217,7 @@
 }
 
 #choice-home .card-item:hover {
-  background-color: black;
+  background-color: var(--color-primary);
 }
 
 #choice-home .card-item:hover .card-title {

@@ -1,6 +1,6 @@
 export default function createFooter() {
   return `
-    <footer class="section-padding bg-black position-relative">
+    <footer class="section-padding position-relative">
       <div class="main-container" data-animate="fadeInUp">
         <div class="content row g-4">
           <div class="col-lg-4 mt-0">

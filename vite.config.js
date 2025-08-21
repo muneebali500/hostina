@@ -11,6 +11,8 @@ export default defineConfig({
         login: resolve(__dirname, "login.html"),
         domains: resolve(__dirname, "domains.html"),
         hostingDetails: resolve(__dirname, "hosting-details.html"),
+        servers: resolve(__dirname, "servers.html"),
+        vpsHosting: resolve(__dirname, "vps-hosting.html"),
       },
     },
     outDir: "dist",

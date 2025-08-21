@@ -1,6 +1,6 @@
 export default function createHeader() {
   return `
-    <header class="py-3 shadow-sm bg-black d-flex align-items-center">
+    <header class="py-3 shadow-sm d-flex align-items-center">
       <div class="main-container">
         <nav class="navbar navbar-expand-lg p-0">
           <!-- Logo on the left -->

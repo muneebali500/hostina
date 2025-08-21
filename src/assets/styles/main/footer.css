@@ -2,6 +2,7 @@ footer {
   color: var(--color-text);
   position: relative;
   overflow: hidden;
+  background-color: var(--color-primary);
 }
 
 footer .main-container {

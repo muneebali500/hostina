@@ -17,12 +17,12 @@
   flex-shrink: 0;
   width: 5rem;
   height: 5rem;
-  background: linear-gradient(135deg, var(--color-primary) 0%, #333333 100%);
-  border-radius: 50%;
+  background: #00000012;
+  border-radius: var(--radius-16);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  /* color: white; */
   font-size: 2rem;
 }
 
@@ -31,17 +31,17 @@
 }
 
 .contact-label {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 700;
-  color: var(--color-primary);
+  color: var(--color-text);
   margin-bottom: 0.5rem;
 }
 
 .contact-text {
-  font-size: 1.5rem;
-  color: var(--color-text);
+  font-size: 1.7rem;
   margin-bottom: 0;
   line-height: 1.5;
+  font-weight: 600;
 }
 
 /* Contact Form Styles */
@@ -159,11 +159,6 @@ select.form-input option {
 }
 
 /* Map Section */
-.map-section {
-  padding: 0;
-  margin: 0;
-}
-
 .map-container {
   width: 100%;
   height: 450px;
