@@ -3,10 +3,16 @@
   color: var(--color-text);
 }
 
+#hero-common .breadcrumb-item + .breadcrumb-item::before,
+#hero-common .breadcrumb-item.active {
+  color: var(--color-text-dark);
+}
+
 #hero-common {
   height: 38rem;
   background-color: var(--color-primary);
-  color: var(--color-text);
+  color: var(--color-text-dark);
+  position: relative;
 }
 
 #hero-common::before {
@@ -110,6 +116,7 @@
     );
   background-size: 100% 100%;
   background-repeat: no-repeat;
+  z-index: -1;
 }
 
 #pricing-home .pricing-card:hover {
@@ -239,6 +246,55 @@
   background: var(--color-primary);
 }
 
+/* /////////////////// ACADEMY HOME STYLES /////////////// */
+/* /////////////////////////////////////////////////////// */
+#academy-home .card-item {
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: var(--drop-shadow);
+  transition: 0.3s linear;
+}
+
+#academy-home figure {
+  height: 20rem;
+  width: 100%;
+}
+
+#academy-home figure img {
+  transition: 0.3s linear;
+}
+
+#academy-home .card-item:hover img {
+  transform: scale(1.05);
+}
+
+#academy-home .card-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+#academy-home .card-date {
+  font-size: 1rem;
+  color: #6e6e6e;
+  font-weight: 700;
+}
+
+#academy-home .card-desc {
+  font-size: 1.4rem;
+  color: var(--color-text);
+  margin-bottom: 2rem;
+}
+
+#academy-home .btn {
+  width: 100%;
+}
+
 /*//////////////////// FEATURES SECTION ////////////////////////////*/
 /* //////////////////////////////////////////////////////////////// */
 #features-common .list-wrapper {
@@ -259,6 +315,80 @@
   font-size: 12px;
 }
 
+/*//////////////////// POPULAR DOMAINS SECTION /////////////////////////*/
+/* //////////////////////////////////////////////////////////////////// */
+.domain-card {
+  background: white;
+  padding: 3rem 2rem;
+  border-radius: var(--radius-18);
+  box-shadow: var(--shadow-sm);
+  border: 2px solid #f1f3f4;
+  transition: var(--transition-base);
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.domain-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-lg);
+}
+
+.domain-card .domain-info {
+  margin-bottom: 2rem;
+}
+
+.domain-card .domain-name {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.domain-card .domain-price {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.domain-card .domain-select-btn {
+  padding: 1.2rem 2rem;
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-16);
+  font-size: 1.4rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-base);
+  width: 100%;
+}
+
+.domain-card .domain-select-btn:hover {
+  background: #333333;
+  transform: translateY(-2px);
+}
+
+.domain-card .ellipse {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #0000000f;
+}
+
+.domain-card .ellipse-1 {
+  top: -5rem;
+  right: -2rem;
+  width: 10rem;
+  height: 10rem;
+}
+
+.domain-card .ellipse-2 {
+  top: 3.4rem;
+  right: -3rem;
+  width: 5rem;
+  height: 5rem;
+}
+
 /*//////////////////// COMPARISON PRICING SECTION ////////////////////////////*/
 /* ////////////////////////////////////////////////////////////////////////// */
 .comparison-pricing {
@@ -269,7 +399,7 @@
 .comparison-table {
   border-collapse: separate;
   border-spacing: 10px;
-  max-width: 1280px;
+  min-width: 900px;
 }
 
 .comparison-table thead span {
@@ -279,11 +409,68 @@
 .comparison-table th,
 .comparison-table td {
   border-radius: 10px;
-  box-shadow: var(--drop-shaow);
+  box-shadow: var(--drop-shadow);
 }
 
 .comparison-table td {
   color: var(--color-text);
+}
+
+/*//////////// DEDICATED FEATURES SECTION /////////////////////*/
+/* /////////////////////////////////////////////////////////// */
+#dedicated-features .card-item {
+  border-radius: var(--radius-24);
+  overflow: hidden;
+  box-shadow: var(--drop-shadow);
+  transition: 0.3s linear;
+  padding: 1.6rem;
+}
+
+#dedicated-features figure {
+  height: 30rem;
+  position: relative;
+}
+
+#dedicated-features figure::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+      14px at 60% 14%,
+      #0000001a 100%,
+      transparent 100%
+    ),
+    radial-gradient(8px at 25% 85%, #0000001a 100%, transparent 100%),
+    radial-gradient(8px at 7% 45%, #0000001a 100%, transparent 100%);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+#dedicated-features figure img {
+  transition: 0.3s linear;
+  object-fit: fill;
+  width: 60%;
+}
+
+#dedicated-features .card-item:hover img {
+  transform: scale(1.05);
+}
+
+#dedicated-features .card-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+#dedicated-features .card-desc {
+  font-size: 1.4rem;
+  color: var(--color-text);
+  margin-bottom: 2rem;
 }
 
 /*//////////////////// FAQ SECTION ////////////////////////////*/
@@ -403,7 +590,7 @@
   border-radius: var(--radius-16);
   padding: 0 3rem 3rem;
   margin-right: 30px;
-  box-shadow: var(--drop-shaow);
+  box-shadow: var(--drop-shadow);
   border: 0.8px solid #00000010;
   opacity: 0.6;
   transition: all 0.3s linear;
@@ -483,6 +670,226 @@
   background: var(--color-primary);
 }
 
+/* /////////////////// CHOICE HOME STYLES /////////////// */
+/* /////////////////////////////////////////////////////// */
+#choice-home .cards-container .card-item {
+  border-radius: var(--radius-24);
+  box-shadow: var(--drop-shadow);
+  gap: 2rem;
+  overflow: hidden;
+  transform: rotate(0deg);
+  transition: all 0.3s ease;
+}
+
+#choice-home .cards-container .card-item:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+#choice-home .cards-container .card-num {
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.card-item:hover .card-num {
+  transform: scale(1.1) rotate(10deg);
+}
+
+#choice-home .cards-container .card-num span {
+  background-color: #f3f3f3;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+#choice-home .cards-container .card-title {
+  font-size: 1.8rem;
+  transform: rotate(0deg);
+  transition: 0.3s ease;
+}
+
+#choice-home .cards-container .card-desc {
+  font-size: 1.2rem;
+  padding-right: 2rem;
+  color: var(--color-text);
+  margin-bottom: 0;
+}
+
+#choice-home .card-item:hover {
+  background-color: var(--color-primary);
+}
+
+#choice-home .card-item:hover .card-title {
+  color: #fff;
+}
+
+#choice-home .card-item:hover .card-desc {
+  color: var(--color-text-dark);
+}
+
+/*//////////////////// BEST PLAN SECTION ////////////////////////*/
+/* ///////////////////////////////////////////////////////////// */
+#best-plan-section .toggle-switch {
+  background-color: #f1f3f4;
+  border-radius: var(--radius-16);
+  position: relative;
+  display: inline-flex;
+}
+
+#best-plan-section .toggle-option {
+  padding: 8px 24px;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: var(--radius-16);
+  transition: all 0.3s ease;
+}
+
+#best-plan-section .toggle-option.active {
+  background-color: #000;
+  color: white;
+}
+
+#best-plan-section .price-box {
+  padding: 5rem 5%;
+  border-radius: var(--radius-24);
+}
+
+#best-plan-section .price-box h2 {
+  font-size: calc(6rem + 0.9vw);
+}
+
+#best-plan-section .price-box .plus-sign {
+  font-size: 5rem;
+}
+
+/* Price range styling */
+#best-plan-section .price-range {
+  width: 100%;
+  height: 4px;
+  border-radius: 5px;
+  background: #e5e7eb;
+  position: relative;
+  margin-bottom: 8rem;
+}
+
+#best-plan-section .price-range::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #000;
+  cursor: pointer;
+  border: none;
+}
+
+#best-plan-section .price-range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #000;
+  cursor: pointer;
+  border: none;
+}
+
+/* Tooltip for price slider */
+#best-plan-section .price-tooltip {
+  position: absolute;
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-weight: 600;
+  transform: translateX(-50%);
+  top: 40px;
+  display: none;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+#best-plan-section .price-tooltip::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #dee2e6;
+}
+
+/*//////////////////// BLOG SECTION ////////////////////////////*/
+/* ///////////////////////////////////////////////////////////// */
+#blog-section .blog-image {
+  height: 40rem;
+}
+
+#blog-section .blog-tag:hover {
+  background: var(--color-secondary) !important;
+  color: white !important;
+}
+
+#blog-section .social-icons li a {
+  background-color: var(--color-light-gray);
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+}
+
+#blog-section .sidebar-title {
+  position: relative;
+  border-bottom: 1px dotted;
+}
+
+#blog-section .latest-post-item,
+#blog-section .latest-post-title,
+#blog-section .blog-tag,
+#blog-section .blog-title,
+#blog-section .category-link {
+  transition: var(--transition-base);
+}
+
+#blog-section .latest-post-item img {
+  height: 6rem;
+  width: 6rem;
+}
+
+#blog-section .category-item {
+  transition: var(--transition-base);
+  border-radius: var(--radius-16);
+}
+
+#blog-section .category-item:hover .category-link,
+#blog-section .latest-post-item:hover {
+  transform: translateX(5px);
+}
+
+/* /////// pagination style //////// */
+.pagination .page-item .page-link {
+  color: black;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin: 0 0.25rem;
+  padding: 6px 1.3rem;
+  font-size: 1.4rem;
+}
+
+.pagination .page-item.active .page-link,
+.pagination .page-item:hover .page-link {
+  background-color: black;
+  color: white;
+  border-color: black;
+}
+
 /*//////////////////// MEDIA QUERIES ////////////////////////////*/
 /* ///////////////////////////////////////////////////////////// */
 @media only screen and (max-width: 1079px) {
@@ -492,17 +899,32 @@
   .testimonial-card {
     min-width: calc(50% - 15px);
   }
-
-  .comparison-table {
-    max-width: auto;
-    min-width: 900px;
-  }
 }
 
 @media only screen and (max-width: 991px) {
+  #best-plan-section .price-box {
+    padding: 3rem 2%;
+  }
+
+  #best-plan-section .price-box h2 {
+    font-size: calc(3rem + 0.5vw);
+  }
+
+  #best-plan-section .price-box .plus-sign {
+    font-size: 3rem;
+  }
+
+  #best-plan-section .price-box small {
+    font-size: 1.2rem !important;
+    white-space: nowrap;
+  }
 }
 
 @media (max-width: 767px) {
+  #hero-common {
+    height: 25rem;
+  }
+
   #pricing-home .plan-features li,
   #pricing-home .plan-description {
     font-size: 1.5rem;
@@ -527,9 +949,32 @@
   .comparison-pricing {
     padding: 3rem 5%;
   }
+
+  #blog-section .blog-image {
+    height: 200px;
+  }
+
+  #best-plan-section .price-box {
+    padding: 3rem 0%;
+  }
+
+  #best-plan-section .price-box h2 {
+    font-size: calc(2rem + 0.5vw);
+  }
+
+  #best-plan-section .price-box .plus-sign {
+    font-size: 1.4rem;
+  }
+
+  #best-plan-section .price-tooltip span {
+    font-size: 1rem;
+  }
 }
 
 @media only screen and (max-width: 640px) {
+  #best-plan-section .price-box small {
+    font-size: 9px !important;
+  }
 }
 
 @media only screen and (max-width: 479px) {

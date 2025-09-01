@@ -1,9 +1,3 @@
-import createHeader from "../../templates/header.js";
-import createFooter from "../../templates/footer.js";
-
-document.body.insertAdjacentHTML("afterbegin", createHeader());
-document.body.insertAdjacentHTML("beforeend", createFooter());
-
 class TestimonialSlider {
   constructor() {
     this.currentIndex = 0;

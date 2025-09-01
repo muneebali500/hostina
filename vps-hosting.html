@@ -52,8 +52,7 @@
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.png" />
-    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logo.png" />
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
@@ -91,496 +90,1320 @@
     />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="./src/assets/styles/main/globals.css" />
-    <link rel="stylesheet" href="./src/assets/styles/main/header.css" />
-    <link rel="stylesheet" href="./src/assets/styles/main/footer.css" />
-    <link rel="stylesheet" href="./src/assets/styles/main/common.css" />
-    <link rel="stylesheet" href="./src/assets/styles/main/vps-hosting.css" />
+    <link rel="stylesheet" href="src/assets/styles/main/globals.css" />
+    <link rel="stylesheet" href="src/assets/styles/main/header.css" />
+    <link rel="stylesheet" href="src/assets/styles/main/footer.css" />
+    <link rel="stylesheet" href="src/assets/styles/main/common.css" />
   </head>
 
   <body>
-    <!-- Hero Section -->
-    <section id="hero-common" class="hero-common flex-center">
-      <div class="container">
-        <div class="content">
-          <h1 class="hero-heading" data-animate="fadeInDown">VPS Hosting</h1>
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb flex-center" data-animate="fadeInUp">
-              <li class="breadcrumb-item"><a href="/">Home</a></li>
-              <li class="breadcrumb-item active" aria-current="page">
-                VPS Details
-              </li>
-            </ol>
-          </nav>
-        </div>
-      </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section class="bg-light py-5">
+    <header id="main-header" class="py-3 shadow-sm d-flex align-items-center">
       <div class="main-container">
-        <div class="bg-white rounded-4 p-5 shadow-sm">
-          <div class="section-subheading mx-auto text-center mb-3">
-            Our Price
-          </div>
-          <h2 class="section-heading text-center mb-5">
-            Choose a Best Plan for You
-          </h2>
-
-          <!-- Toggle Switch -->
-          <div class="d-flex justify-content-center mb-5">
-            <div class="toggle-switch">
-              <button class="toggle-option active" data-billing="monthly">
-                Monthly
-              </button>
-              <button class="toggle-option" data-billing="yearly">
-                Yearly
-              </button>
-            </div>
-          </div>
-
-          <!-- Price Breakdown -->
-          <div
-            class="row align-items-center justify-content-center text-center mb-4"
+        <nav class="navbar navbar-expand-lg p-0">
+          <a
+            class="navbar-brand d-flex align-items-center me-auto"
+            href="index.html"
           >
-            <div class="col-md-3">
-              <div class="h1 fw-bold mb-1" id="setupPrice">$100</div>
-              <div class="text-muted small">One Time Setup Free</div>
-            </div>
-            <div class="col-md-1 fs-2 text-muted">+</div>
-            <div class="col-md-3">
-              <div class="h1 fw-bold mb-1" id="basePrice">$70</div>
-              <div class="text-muted small">/mo</div>
-              <div class="text-muted small">Base Price</div>
-            </div>
-            <div class="col-md-1 fs-2 text-muted">+</div>
-            <div class="col-md-3">
-              <div class="h1 fw-bold mb-1" id="additionalPrice">$10</div>
-              <div class="text-muted small">/mo</div>
-              <div class="text-muted small">Per Additional Features</div>
-            </div>
-          </div>
+            <img
+              src="/images/logo.png"
+              alt="Hostina Logo"
+              class="me-2"
+              loading="lazy"
+            />
+            <h4 class="m-0 text-white">Hostina</h4>
+          </a>
 
-          <!-- Price Slider -->
-          <div class="row justify-content-center mb-4">
-            <div class="col-md-8 position-relative">
-              <input
-                type="range"
-                class="price-range"
-                id="priceSlider"
-                min="100"
-                max="180"
-                value="102"
+          <button
+            class="navbar-toggler ms-3"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <i class="bi bi-list"></i>
+          </button>
+
+          <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header p-4">
+              <img
+                src="/images/logo.png"
+                alt="Hostina Logo"
+                loading="lazy"
+                style="width: 35px"
+                class="me-2"
               />
-              <div class="price-tooltip" id="priceTooltip">
-                <span>Total Price</span>
-                <span class="fw-bold" id="tooltipPrice">$102</span>
+              <h5 class="offcanvas-title fs-2" id="offcanvasNavbarLabel">
+                Hostina
+              </h5>
+              <button
+                type="button"
+                class="btn-close me-3"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul
+                class="navbar-nav justify-content-center align-items-lg-center flex-grow-1 pe-3"
+              >
+                <li class="nav-item px-3 dropdown">
+                  <a
+                    class="nav-link d-flex align-items-center justify-content-between gap-3"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                  >
+                    Domains <i class="fas fa-angle-down"></i>
+                  </a>
+                  <ul
+                    class="dropdown-menu p-3 fast-animation"
+                    data-animate="fadeInUp"
+                  >
+                    <li>
+                      <a class="dropdown-item" href="domains.html"
+                        >Domain Search</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Domain Transfer</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Domain Pricing</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item px-3 dropdown">
+                  <a
+                    class="nav-link d-flex align-items-center justify-content-between gap-3"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                  >
+                    Hosting <i class="fas fa-angle-down"></i>
+                  </a>
+                  <ul
+                    class="dropdown-menu p-3 fast-animation"
+                    data-animate="fadeInUp"
+                  >
+                    <li>
+                      <a class="dropdown-item" href="hosting-details.html"
+                        >Shared Hosting</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="vps-hosting.html"
+                        >VPS Hosting</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="dedicated-hosting.html"
+                        >Dedicated Servers</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="games-hosting.html"
+                        >Games Hosting</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item px-3 dropdown">
+                  <a
+                    class="nav-link d-flex align-items-center justify-content-between gap-3"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                  >
+                    Servers <i class="fas fa-angle-down"></i>
+                  </a>
+                  <ul
+                    class="dropdown-menu p-3 fast-animation"
+                    data-animate="fadeInUp"
+                  >
+                    <li>
+                      <a class="dropdown-item" href="servers.html">Servers</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">SSL Certificates</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Website Builder</a>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Email Hosting</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item px-3">
+                  <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+                <li class="nav-item px-3">
+                  <a class="nav-link" href="blogs.html">Blogs</a>
+                </li>
+              </ul>
+
+              <div
+                class="d-flex flex-column flex-lg-row align-items-lg-center gap-3 mt-3 mt-lg-0 p-3 p-lg-0"
+              >
+                <div class="dropdown">
+                  <select class="dark-arrow">
+                    <option value="USD">
+                      <i class="bi bi-flag-fill me-2"></i>USD
+                    </option>
+                    <option value="EGP">
+                      <i class="bi bi-flag-fill me-2"></i>EGP
+                    </option>
+                    <option value="EUR">
+                      <i class="bi bi-flag-fill me-2"></i>EUR
+                    </option>
+                  </select>
+                </div>
+
+                <a href="login.html" class="btn sign-up-btn"> Sign Up </a>
+
+                <div class="nav-item dropdown p-2 d-none">
+                  <a
+                    class="nav-link d-flex align-items-center justify-content-between gap-3"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                  >
+                    <span>
+                      <i class="fa-solid fa-user me-2"></i>
+                      Account
+                    </span>
+                    <i class="fas fa-angle-down"></i>
+                  </a>
+                  <ul
+                    class="dropdown-menu p-3 fast-animation w-100"
+                    data-animate="fadeInUp"
+                  >
+                    <li>
+                      <a class="dropdown-item" href="#">Profile</a>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
+        </nav>
+      </div>
+    </header>
 
-          <!-- Choose Plan Button -->
-          <div class="text-center">
-            <button class="btn btn-dark px-5 py-2 rounded-3">
-              Choose Plan
-            </button>
+    <main id="vps-hosting-main">
+      <!-- Hero Section -->
+      <section id="hero-common" class="hero-common flex-center">
+        <div class="container">
+          <div class="content">
+            <h1 class="hero-heading" data-animate="fadeInDown">VPS Hosting</h1>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb flex-center" data-animate="fadeInUp">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  VPS Details
+                </li>
+              </ol>
+            </nav>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- FEATURES SECTION STARTS -->
-    <section id="features-common" class="features-common section-padding">
-      <div class="main-container">
-        <div class="content">
-          <h2
-            class="section-heading mb-5"
-            data-animate="fadeInUp"
-            data-animate-delay="100"
-          >
-            Included with every plan
-          </h2>
-          <ul class="row g-4 list-wrapper">
-            <li
-              class="col-md-6 col-lg-4"
+      <!-- BEST PLAN SECTION STARTS -->
+      <section id="best-plan-section" class="best-plan-section section-padding">
+        <div class="main-container">
+          <div class="content">
+            <h4
+              class="section-subheading"
               data-animate="fadeInUp"
               data-animate-delay="100"
             >
-              <div class="d-flex align-items-center gap-3">
-                <span class="feature-check">✓</span>
-                <span>30 Day Money Back Guarantee</span>
-              </div>
-            </li>
-            <li
-              class="col-md-6 col-lg-4"
-              data-animate="fadeInUp"
-              data-animate-delay="150"
-            >
-              <div class="d-flex align-items-center gap-3">
-                <span class="feature-check">✓</span>
-                <span>Faster Server</span>
-              </div>
-            </li>
-            <li
-              class="col-md-6 col-lg-4"
+              Our Price
+            </h4>
+            <h2
+              class="section-heading"
               data-animate="fadeInUp"
               data-animate-delay="200"
             >
-              <div class="d-flex align-items-center gap-3">
-                <span class="feature-check">✓</span>
-                <span>Clustered Failover DNS</span>
-              </div>
-            </li>
-            <li
-              class="col-md-6 col-lg-4"
+              Choose a Best Plan for You
+            </h2>
+
+            <!-- Toggle Switch -->
+            <div
+              class="d-flex justify-content-center mb-5"
               data-animate="fadeInUp"
-              data-animate-delay="250"
+              data-animate-delay="200"
             >
-              <div class="d-flex align-items-center gap-3">
-                <span class="feature-check">✓</span>
-                <span>1 Hour Response Time</span>
+              <div class="toggle-switch">
+                <button class="toggle-option active" data-billing="monthly">
+                  Monthly
+                </button>
+                <button class="toggle-option" data-billing="yearly">
+                  Yearly
+                </button>
               </div>
-            </li>
-            <li
-              class="col-md-6 col-lg-4"
-              data-animate="fadeInUp"
+            </div>
+
+            <!-- Monthly Price Box -->
+            <div
+              class="price-box shadow-normal"
+              id="monthlyPriceBox"
+              data-animate="zoomIn"
               data-animate-delay="300"
             >
-              <div class="d-flex align-items-center gap-3">
-                <span class="feature-check">✓</span>
-                <span>Server Side Includes</span>
+              <div
+                class="row align-items-center justify-content-center text-center mb-4"
+              >
+                <div class="col-3">
+                  <h2 class="fw-bold mb-1" id="monthlySetupPrice">$100</h2>
+                  <small class="clr-text">One Time Setup Fee</small>
+                </div>
+                <span class="col-1 plus-sign">+</span>
+                <div class="col-3">
+                  <h2 class="h1 fw-bold mb-1" id="monthlyBasePrice">
+                    $70 <small class="clr-text fs-3">/mo</small>
+                  </h2>
+                  <small class="clr-text">Base Price</small>
+                </div>
+                <span class="col-1 plus-sign">+</span>
+                <div class="col-3">
+                  <h2 class="h1 fw-bold mb-1" id="monthlyAdditionalPrice">
+                    $10 <small class="clr-text fs-3">/mo</small>
+                  </h2>
+                  <small class="clr-text">Per Additional Feature</small>
+                </div>
               </div>
-            </li>
-            <li
-              class="col-md-6 col-lg-4"
-              data-animate="fadeInUp"
-              data-animate-delay="350"
-            >
-              <div class="d-flex align-items-center gap-3">
-                <span class="feature-check">✓</span>
-                <span>Unlimited FTP Accounts</span>
-              </div>
-            </li>
-            <li
-              class="col-md-6 col-lg-4"
-              data-animate="fadeInUp"
-              data-animate-delay="400"
-            >
-              <div class="d-flex align-items-center gap-3">
-                <span class="feature-check">✓</span>
-                <span>24/7 Technical Support</span>
-              </div>
-            </li>
-            <li
-              class="col-md-6 col-lg-4"
-              data-animate="fadeInUp"
-              data-animate-delay="450"
-            >
-              <div class="d-flex align-items-center gap-3">
-                <span class="feature-check">✓</span>
-                <span>Unlimited MySQL Databases</span>
-              </div>
-            </li>
-            <li
-              class="col-md-6 col-lg-4"
-              data-animate="fadeInUp"
-              data-animate-delay="500"
-            >
-              <div class="d-flex align-items-center gap-3">
-                <span class="feature-check">✓</span>
-                <span>Unlimited Sub Domains</span>
-              </div>
-            </li>
-            <li
-              class="col-md-6 col-lg-4"
-              data-animate="fadeInUp"
-              data-animate-delay="550"
-            >
-              <div class="d-flex align-items-center gap-3">
-                <span class="feature-check">✓</span>
-                <span>Unlimited E-Mail Accounts</span>
-              </div>
-            </li>
-            <li
-              class="col-md-6 col-lg-4"
-              data-animate="fadeInUp"
-              data-animate-delay="600"
-            >
-              <div class="d-flex align-items-center gap-3">
-                <span class="feature-check">✓</span>
-                <span>LiteSpeed Web Server</span>
-              </div>
-            </li>
-            <li
-              class="col-md-6 col-lg-4"
-              data-animate="fadeInUp"
-              data-animate-delay="650"
-            >
-              <div class="d-flex align-items-center gap-3">
-                <span class="feature-check">✓</span>
-                <span>LiteSpeed Web Server</span>
-              </div>
-            </li>
 
-            <li
-              class="col-md-6 col-lg-4"
-              data-animate="fadeInUp"
-              data-animate-delay="700"
-            >
-              <div class="d-flex align-items-center gap-3">
-                <span class="feature-check">✓</span>
-                <span>Spam Protection</span>
+              <!-- Price Slider -->
+              <div class="row justify-content-center price-slider">
+                <div class="col-10 position-relative">
+                  <input
+                    type="range"
+                    class="price-range"
+                    id="monthlyPriceSlider"
+                    min="100"
+                    max="180"
+                    value="102"
+                  />
+                  <div class="price-tooltip" id="monthlyPriceTooltip">
+                    <span>Total Monthly Price</span>
+                    <span class="fw-bold" id="monthlyTooltipPrice">$102</span>
+                  </div>
+                </div>
               </div>
-            </li>
-            <li
-              class="col-md-6 col-lg-4"
-              data-animate="fadeInUp"
-              data-animate-delay="750"
-            >
-              <div class="d-flex align-items-center gap-3">
-                <span class="feature-check">✓</span>
-                <span>Unlimited Auto Responders</span>
+
+              <!-- Choose Plan Button -->
+              <div class="text-center">
+                <button class="btn primary-btn">Choose Monthly Plan</button>
               </div>
-            </li>
-            <li
-              class="col-md-6 col-lg-4"
-              data-animate="fadeInUp"
-              data-animate-delay="800"
-            >
-              <div class="d-flex align-items-center gap-3">
-                <span class="feature-check">✓</span>
-                <span>Malware & Exploit Scanning</span>
+            </div>
+
+            <!-- Yearly Price Box -->
+            <div class="price-box shadow-normal d-none" id="yearlyPriceBox">
+              <div
+                class="row align-items-center justify-content-center text-center mb-4"
+              >
+                <div class="col-3">
+                  <h2 class="fw-bold mb-1" id="yearlySetupPrice">$100</h2>
+                  <small class="clr-text">One Time Setup Fee</small>
+                </div>
+                <span class="col-1 plus-sign">+</span>
+                <div class="col-3">
+                  <h2 class="h1 fw-bold mb-1" id="yearlyBasePrice">
+                    $1100 <small class="clr-text fs-3">/yr</small>
+                  </h2>
+                  <small class="clr-text">Base Price</small>
+                </div>
+                <span class="col-1 plus-sign">+</span>
+                <div class="col-3">
+                  <h2 class="h1 fw-bold mb-1" id="yearlyAdditionalPrice">
+                    $110 <small class="clr-text fs-3">/yr</small>
+                  </h2>
+                  <small class="clr-text">Per Additional Feature</small>
+                </div>
               </div>
-            </li>
-            <li
-              class="col-md-6 col-lg-4"
-              data-animate="fadeInUp"
-              data-animate-delay="850"
-            >
-              <div class="d-flex align-items-center gap-3">
-                <span class="feature-check">✓</span>
-                <span>Node.js Version Selector</span>
+
+              <!-- Price Slider -->
+              <div class="row justify-content-center price-slider">
+                <div class="col-10 position-relative">
+                  <input
+                    type="range"
+                    class="price-range"
+                    id="yearlyPriceSlider"
+                    min="100"
+                    max="1310"
+                    value="102"
+                  />
+                  <div class="price-tooltip" id="yearlyPriceTooltip">
+                    <span>Total Yearly Price</span>
+                    <span class="fw-bold" id="yearlyTooltipPrice">$102</span>
+                  </div>
+                </div>
               </div>
-            </li>
-            <li
-              class="col-md-6 col-lg-4"
-              data-animate="fadeInUp"
-              data-animate-delay="900"
-            >
-              <div class="d-flex align-items-center gap-3">
-                <span class="feature-check">✓</span>
-                <span>Python Version Selector</span>
+
+              <!-- Choose Plan Button -->
+              <div class="text-center">
+                <button class="btn primary-btn">Choose Yearly Plan</button>
               </div>
-            </li>
-            <li
-              class="col-md-6 col-lg-4"
-              data-animate="fadeInUp"
-              data-animate-delay="1000"
-            >
-              <div class="d-flex align-items-center gap-3">
-                <span class="feature-check">✓</span>
-                <span>SSH Access Available</span>
-              </div>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
-    <!-- FEATURES SECTION ENDS -->
+      </section>
+      <!-- BEST PLAN SECTION ENDS -->
 
-    <!-- COMPARISON SECTION STARTS -->
-    <section id="comparison-pricing" class="comparison-pricing">
-      <div class="content">
-        <h4
-          class="section-subheading mb-3"
-          data-animate="fadeInUp"
-          data-animate-delay="100"
-        >
-          Hosting Pricing
-        </h4>
-        <h2
-          class="section-heading mb-5"
-          data-animate="fadeInUp"
-          data-animate-delay="200"
-        >
-          Compare Between Hosting Plans & Features
-        </h2>
+      <!-- FEATURES SECTION STARTS -->
+      <section id="features-common" class="features-common section-padding">
+        <div class="main-container">
+          <div class="content">
+            <h2
+              class="section-heading mb-5"
+              data-animate="fadeInUp"
+              data-animate-delay="100"
+            >
+              Included with every plan
+            </h2>
+            <ul class="row g-4 list-wrapper">
+              <li
+                class="col-md-6 col-lg-4"
+                data-animate="fadeInUp"
+                data-animate-delay="100"
+              >
+                <div class="d-flex align-items-center gap-3">
+                  <span class="feature-check">✓</span>
+                  <span>30 Day Money Back Guarantee</span>
+                </div>
+              </li>
+              <li
+                class="col-md-6 col-lg-4"
+                data-animate="fadeInUp"
+                data-animate-delay="150"
+              >
+                <div class="d-flex align-items-center gap-3">
+                  <span class="feature-check">✓</span>
+                  <span>Faster Server</span>
+                </div>
+              </li>
+              <li
+                class="col-md-6 col-lg-4"
+                data-animate="fadeInUp"
+                data-animate-delay="200"
+              >
+                <div class="d-flex align-items-center gap-3">
+                  <span class="feature-check">✓</span>
+                  <span>Clustered Failover DNS</span>
+                </div>
+              </li>
+              <li
+                class="col-md-6 col-lg-4"
+                data-animate="fadeInUp"
+                data-animate-delay="250"
+              >
+                <div class="d-flex align-items-center gap-3">
+                  <span class="feature-check">✓</span>
+                  <span>1 Hour Response Time</span>
+                </div>
+              </li>
+              <li
+                class="col-md-6 col-lg-4"
+                data-animate="fadeInUp"
+                data-animate-delay="300"
+              >
+                <div class="d-flex align-items-center gap-3">
+                  <span class="feature-check">✓</span>
+                  <span>Server Side Includes</span>
+                </div>
+              </li>
+              <li
+                class="col-md-6 col-lg-4"
+                data-animate="fadeInUp"
+                data-animate-delay="350"
+              >
+                <div class="d-flex align-items-center gap-3">
+                  <span class="feature-check">✓</span>
+                  <span>Unlimited FTP Accounts</span>
+                </div>
+              </li>
+              <li
+                class="col-md-6 col-lg-4"
+                data-animate="fadeInUp"
+                data-animate-delay="400"
+              >
+                <div class="d-flex align-items-center gap-3">
+                  <span class="feature-check">✓</span>
+                  <span>24/7 Technical Support</span>
+                </div>
+              </li>
+              <li
+                class="col-md-6 col-lg-4"
+                data-animate="fadeInUp"
+                data-animate-delay="450"
+              >
+                <div class="d-flex align-items-center gap-3">
+                  <span class="feature-check">✓</span>
+                  <span>Unlimited MySQL Databases</span>
+                </div>
+              </li>
+              <li
+                class="col-md-6 col-lg-4"
+                data-animate="fadeInUp"
+                data-animate-delay="500"
+              >
+                <div class="d-flex align-items-center gap-3">
+                  <span class="feature-check">✓</span>
+                  <span>Unlimited Sub Domains</span>
+                </div>
+              </li>
+              <li
+                class="col-md-6 col-lg-4"
+                data-animate="fadeInUp"
+                data-animate-delay="550"
+              >
+                <div class="d-flex align-items-center gap-3">
+                  <span class="feature-check">✓</span>
+                  <span>Unlimited E-Mail Accounts</span>
+                </div>
+              </li>
+              <li
+                class="col-md-6 col-lg-4"
+                data-animate="fadeInUp"
+                data-animate-delay="600"
+              >
+                <div class="d-flex align-items-center gap-3">
+                  <span class="feature-check">✓</span>
+                  <span>LiteSpeed Web Server</span>
+                </div>
+              </li>
+              <li
+                class="col-md-6 col-lg-4"
+                data-animate="fadeInUp"
+                data-animate-delay="650"
+              >
+                <div class="d-flex align-items-center gap-3">
+                  <span class="feature-check">✓</span>
+                  <span>LiteSpeed Web Server</span>
+                </div>
+              </li>
 
-        <div
-          class="bg-white rounded-4 shadow-sm overflow-auto"
-          data-animate="zoomIn"
-          data-animate-delay="300"
-        >
-          <table class="table comparison-table mb-0 w-100">
-            <thead class="bg-white">
-              <tr>
-                <th class="border-end-0 text-center">
-                  <span
-                    class="fw-bold d-inline-block fs-2"
-                    style="transform: translateY(-70%)"
+              <li
+                class="col-md-6 col-lg-4"
+                data-animate="fadeInUp"
+                data-animate-delay="700"
+              >
+                <div class="d-flex align-items-center gap-3">
+                  <span class="feature-check">✓</span>
+                  <span>Spam Protection</span>
+                </div>
+              </li>
+              <li
+                class="col-md-6 col-lg-4"
+                data-animate="fadeInUp"
+                data-animate-delay="750"
+              >
+                <div class="d-flex align-items-center gap-3">
+                  <span class="feature-check">✓</span>
+                  <span>Unlimited Auto Responders</span>
+                </div>
+              </li>
+              <li
+                class="col-md-6 col-lg-4"
+                data-animate="fadeInUp"
+                data-animate-delay="800"
+              >
+                <div class="d-flex align-items-center gap-3">
+                  <span class="feature-check">✓</span>
+                  <span>Malware & Exploit Scanning</span>
+                </div>
+              </li>
+              <li
+                class="col-md-6 col-lg-4"
+                data-animate="fadeInUp"
+                data-animate-delay="850"
+              >
+                <div class="d-flex align-items-center gap-3">
+                  <span class="feature-check">✓</span>
+                  <span>Node.js Version Selector</span>
+                </div>
+              </li>
+              <li
+                class="col-md-6 col-lg-4"
+                data-animate="fadeInUp"
+                data-animate-delay="900"
+              >
+                <div class="d-flex align-items-center gap-3">
+                  <span class="feature-check">✓</span>
+                  <span>Python Version Selector</span>
+                </div>
+              </li>
+              <li
+                class="col-md-6 col-lg-4"
+                data-animate="fadeInUp"
+                data-animate-delay="1000"
+              >
+                <div class="d-flex align-items-center gap-3">
+                  <span class="feature-check">✓</span>
+                  <span>SSH Access Available</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- FEATURES SECTION ENDS -->
+
+      <!-- COMPARISON SECTION STARTS -->
+      <section id="comparison-pricing" class="comparison-pricing">
+        <div class="content">
+          <h4
+            class="section-subheading mb-3"
+            data-animate="fadeInUp"
+            data-animate-delay="100"
+          >
+            Hosting Pricing
+          </h4>
+          <h2
+            class="section-heading mb-5"
+            data-animate="fadeInUp"
+            data-animate-delay="200"
+          >
+            Compare Between Hosting Plans & Features
+          </h2>
+
+          <div
+            class="bg-white rounded-4 shadow-sm overflow-auto"
+            data-animate="zoomIn"
+            data-animate-delay="300"
+          >
+            <table class="table comparison-table mb-0 w-100">
+              <thead class="bg-white">
+                <tr>
+                  <th class="border-end-0 text-center">
+                    <span
+                      class="fw-bold d-inline-block fs-2"
+                      style="transform: translateY(-70%)"
+                    >
+                      Compare Between Hosting<br />Plans & Features
+                    </span>
+                  </th>
+                  <th class="p-4 text-center border-start border-end-0">
+                    <span class="fw-bold fs-3 mb-2">Web Hosting 1</span>
+                    <span class="h4 fw-bold mb-1 fs-2">$ 24.50</span>
+                    <span class="text-muted small mb-3">
+                      ( On a 12 month plan )
+                    </span>
+                    <button class="btn primary-btn">Register Now</button>
+                  </th>
+                  <th class="p-4 text-center border-start border-end-0">
+                    <span class="fw-bold fs-3 mb-2">Web Hosting 2</span>
+                    <span class="h4 fw-bold mb-1 fs-2">$ 24.50</span>
+                    <span class="text-muted small mb-3">
+                      ( On a 12 month plan )
+                    </span>
+                    <button class="btn primary-btn">Register Now</button>
+                  </th>
+                  <th class="p-4 text-center">
+                    <span class="fw-bold fs-3 mb-2">Web Hosting 3</span>
+                    <span class="h4 fw-bold mb-1 fs-2">$ 24.50</span>
+                    <span class="text-muted small mb-3">
+                      ( On a 12 month plan )
+                    </span>
+                    <button class="btn primary-btn">Register Now</button>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="p-4 fw-semibold border-end-0">Websites Hosted</td>
+                  <td class="p-4 border-start border-end-0">Unlimited</td>
+                  <td class="p-4 border-start border-end-0">Unlimited</td>
+                  <td class="p-4">Unlimited</td>
+                </tr>
+                <tr>
+                  <td class="p-4 fw-semibold border-end-0">Bandwidth</td>
+                  <td class="p-4 border-start border-end-0">4 TB</td>
+                  <td class="p-4 border-start border-end-0">12 TB</td>
+                  <td class="p-4">14 TB</td>
+                </tr>
+                <tr>
+                  <td class="p-4 fw-semibold border-end-0">CPU (Cores)</td>
+                  <td class="p-4 border-start border-end-0">2 x 2.2GHz</td>
+                  <td class="p-4 border-start border-end-0">2 x 2.2GHz</td>
+                  <td class="p-4">2 x 2.2GHz</td>
+                </tr>
+                <tr>
+                  <td class="p-4 fw-semibold border-end-0">Memory</td>
+                  <td class="p-4 border-start border-end-0">4GB</td>
+                  <td class="p-4 border-start border-end-0">4GB</td>
+                  <td class="p-4">13 GB</td>
+                </tr>
+                <tr>
+                  <td class="p-4 fw-semibold border-end-0">Free cPanel/WHM</td>
+                  <td class="p-4 border-start border-end-0">Unlimited</td>
+                  <td class="p-4 border-start border-end-0">Unlimited</td>
+                  <td class="p-4">Unlimited</td>
+                </tr>
+                <tr>
+                  <td class="p-4 fw-semibold border-end-0">Full Management</td>
+                  <td class="p-4 border-start border-end-0">24/7 Support</td>
+                  <td class="p-4 border-start border-end-0">24/7 Support</td>
+                  <td class="p-4">24/7 Support</td>
+                </tr>
+                <tr>
+                  <td class="p-4 fw-semibold border-end-0">
+                    Priority Technical Support
+                  </td>
+                  <td class="p-4 border-start border-end-0">
+                    <span class="feature-check">✓</span>
+                  </td>
+                  <td class="p-4 border-start border-end-0">
+                    <span class="feature-check">✓</span>
+                  </td>
+                  <td class="p-4">
+                    <span class="feature-check">✓</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="p-4 fw-semibold border-end-0">
+                    7-Days MoneyBack Guarantee
+                  </td>
+                  <td class="p-4 border-start border-end-0">
+                    <span class="feature-check">✓</span>
+                  </td>
+                  <td class="p-4 border-start border-end-0">
+                    <span class="feature-check">✓</span>
+                  </td>
+                  <td class="p-4">
+                    <span class="feature-check">✓</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="p-4 fw-semibold border-end-0">
+                    Multiple Server Locations
+                  </td>
+                  <td class="p-4 border-start border-end-0">Unlimited</td>
+                  <td class="p-4 border-start border-end-0">Unlimited</td>
+                  <td class="p-4">Unlimited</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+      <!-- COMPARISON SECTION ENDS -->
+
+      <!-- 'Why Choose Us Section' Starts -->
+      <section id="choice-home" class="choice-home section-padding">
+        <div class="main-container">
+          <div class="content">
+            <h4
+              class="section-subheading mb-3"
+              data-animate="fadeInUp"
+              data-animate-delay="100"
+            >
+              VPS Features
+            </h4>
+            <h2
+              class="section-heading mb-5"
+              data-animate="fadeInUp"
+              data-animate-delay="200"
+            >
+              See VPS Features
+            </h2>
+            <div class="content row">
+              <ul class="col-lg-6 cards-container mb-4 mb-lg-0">
+                <li class="col-md-6 w-100 mb-4" data-animate="fadeInLeft">
+                  <div
+                    class="card-item position-relative h-100 d-flex align-items-start align-items-lg-center py-5 px-4"
                   >
-                    Compare Between Hosting<br />Plans & Features
-                  </span>
-                </th>
-                <th class="p-4 text-center border-start border-end-0">
-                  <span class="fw-bold fs-3 mb-2">Web Hosting 1</span>
-                  <span class="h4 fw-bold mb-1 fs-2">$ 24.50</span>
-                  <span class="text-muted small mb-3">
-                    ( On a 12 month plan )
-                  </span>
-                  <button class="btn btn-dark btn-sm py-3 px-5 rounded-4 fs-4">
-                    Register Now
+                    <div class="card-num">
+                      <span><i class="fas fa-box-open"></i></span>
+                    </div>
+                    <div>
+                      <h3 class="card-title fw-semibold mb-3">
+                        The Full Package Included Here
+                      </h3>
+                      <p class="card-desc">
+                        We provide powerful servers and advanced data centers to
+                        ensure lightning-fast website loading without
+                        interruptions.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+
+                <li
+                  class="col-md-6 w-100"
+                  data-animate="fadeInLeft"
+                  data-animate-delay="100"
+                >
+                  <div
+                    class="card-item position-relative h-100 d-flex align-items-start align-items-lg-center py-5 px-4"
+                  >
+                    <div class="card-num">
+                      <span><i class="fas fa-infinity"></i></span>
+                    </div>
+                    <div>
+                      <h3 class="card-title fw-semibold">
+                        Unlimited Bandwidth
+                      </h3>
+                      <p class="card-desc">
+                        An intuitive control panel makes it easy to manage your
+                        website, even with no technical experience.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <div class="col-lg-6 cards-container" data-animate="fadeInRight">
+                <div
+                  class="card-item position-relative h-100 d-flex align-items-start align-items-lg-center justify-content-start"
+                >
+                  <div class="col-md-8 py-5 px-5 position-relative z-10">
+                    <h3 class="card-title fw-semibold mb-4">
+                      Ultra-Fast Performance ِAny Time
+                    </h3>
+                    <p class="card-desc mb-5">
+                      We provide powerful VPSservers and advanced data centers
+                      to ensure lightning-fast website loading without
+                      interruptions.
+                    </p>
+                    <button
+                      class="btn-pulse-infinite btn btn-dark py-3 px-5 rounded-4 fs-5"
+                    >
+                      Start Now
+                    </button>
+                  </div>
+
+                  <figure
+                    class="position-absolute mb-0 d-none d-md-block"
+                    style="right: -15%"
+                  >
+                    <img
+                      src="/images/choice-img.png"
+                      alt="Choice Pic"
+                      loading="lazy"
+                    />
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 'Why Choose Us Section' Ends -->
+
+      <!-- TESTIMONIALS SECTION STARTS -->
+      <section
+        id="testimonials-section"
+        class="testimonials-section"
+        aria-labelledby="testimonials-heading"
+      >
+        <div class="main-container">
+          <div class="section-header">
+            <div>
+              <p
+                class="section-subheading"
+                id="testimonials-subheading"
+                data-animate="fadeIn"
+              >
+                Kudos
+              </p>
+              <h2
+                class="section-heading mb-0"
+                id="testimonials-heading"
+                data-animate="fadeInUp"
+                data-animate-delay="200"
+              >
+                Client's Review
+              </h2>
+            </div>
+            <div class="nav-controls">
+              <button
+                class="nav-btn"
+                id="prevBtn"
+                aria-label="Previous testimonials"
+                onclick="previousSlide()"
+              >
+                ‹
+              </button>
+              <button
+                class="nav-btn active"
+                id="nextBtn"
+                aria-label="Next testimonials"
+                onclick="nextSlide()"
+              >
+                ›
+              </button>
+            </div>
+          </div>
+
+          <div class="testimonials-container" role="region" aria-live="polite">
+            <div class="testimonials-wrapper">
+              <ul
+                class="testimonials-track"
+                id="testimonials-track"
+                role="list"
+              >
+                <!-- Testimonial cards -->
+                <li class="testimonial-card" role="listitem">
+                  <figure>
+                    <div class="avatar" aria-hidden="true">
+                      <img
+                        src="/images/user-profile-pic.jpg"
+                        alt="User Pic"
+                        loading="lazy"
+                        class="cover"
+                      />
+                    </div>
+                    <blockquote class="testimonial-text">
+                      "This platform transformed our workflow completely. The
+                      intuitive design and powerful features helped us increase
+                      productivity by 300%."
+                    </blockquote>
+                    <figcaption
+                      class="author-info d-flex justify-content-between align-items-end gap-3"
+                    >
+                      <div>
+                        <span class="author-name d-block">Sarah Johnson</span>
+                        <span class="author-title">Product Manager</span>
+                      </div>
+                      <div class="stars" aria-label="Rating: 5 stars">
+                        <span class="star">5.0 ★</span>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </li>
+
+                <li class="testimonial-card active" role="listitem">
+                  <figure>
+                    <div class="avatar" aria-hidden="true">
+                      <img
+                        src="/images/user-profile-pic.jpg"
+                        alt="User Pic"
+                        loading="lazy"
+                        class="cover"
+                      />
+                    </div>
+                    <blockquote class="testimonial-text">
+                      "Outstanding support and reliability. Our team has been
+                      using this for 2 years and we couldn't imagine working
+                      without it now."
+                    </blockquote>
+                    <figcaption
+                      class="author-info d-flex justify-content-between align-items-end gap-3"
+                    >
+                      <div>
+                        <span class="author-name d-block">Sarah Johnson</span>
+                        <span class="author-title">Product Manager</span>
+                      </div>
+                      <div class="stars" aria-label="Rating: 5 stars">
+                        <span class="star">5.0 ★</span>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </li>
+
+                <li class="testimonial-card" role="listitem">
+                  <figure>
+                    <div class="avatar" aria-hidden="true">
+                      <img
+                        src="/images/user-profile-pic.jpg"
+                        alt="User Pic"
+                        loading="lazy"
+                        class="cover"
+                      />
+                    </div>
+                    <blockquote class="testimonial-text">
+                      "The ROI we've seen has been incredible. Implementation
+                      was smooth and the results exceeded our expectations
+                      significantly."
+                    </blockquote>
+                    <figcaption
+                      class="author-info d-flex justify-content-between align-items-end gap-3"
+                    >
+                      <div>
+                        <span class="author-name d-block">Sarah Johnson</span>
+                        <span class="author-title">Product Manager</span>
+                      </div>
+                      <div class="stars" aria-label="Rating: 5 stars">
+                        <span class="star">5.0 ★</span>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </li>
+
+                <li class="testimonial-card" role="listitem">
+                  <figure>
+                    <div class="avatar" aria-hidden="true">
+                      <img
+                        src="/images/user-profile-pic.jpg"
+                        alt="User Pic"
+                        loading="lazy"
+                        class="cover"
+                      />
+                    </div>
+                    <blockquote class="testimonial-text">
+                      "A game-changer for our business operations. The customer
+                      service is exceptional and the platform is incredibly
+                      user-friendly."
+                    </blockquote>
+                    <figcaption
+                      class="author-info d-flex justify-content-between align-items-end gap-3"
+                    >
+                      <div>
+                        <span class="author-name d-block">Sarah Johnson</span>
+                        <span class="author-title">Product Manager</span>
+                      </div>
+                      <div class="stars" aria-label="Rating: 5 stars">
+                        <span class="star">5.0 ★</span>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </li>
+
+                <li class="testimonial-card" role="listitem">
+                  <figure>
+                    <div class="avatar" aria-hidden="true">
+                      <img
+                        src="/images/user-profile-pic.jpg"
+                        alt="User Pic"
+                        loading="lazy"
+                        class="cover"
+                      />
+                    </div>
+                    <blockquote class="testimonial-text">
+                      "Seamless integration and powerful analytics. This tool
+                      has become an essential part of our daily operations and
+                      strategy."
+                    </blockquote>
+                    <figcaption
+                      class="author-info d-flex justify-content-between align-items-end gap-3"
+                    >
+                      <div>
+                        <span class="author-name d-block">Sarah Johnson</span>
+                        <span class="author-title">Product Manager</span>
+                      </div>
+                      <div class="stars" aria-label="Rating: 5 stars">
+                        <span class="star">5.0 ★</span>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </li>
+
+                <li class="testimonial-card" role="listitem">
+                  <figure>
+                    <div class="avatar" aria-hidden="true">
+                      <img
+                        src="/images/user-profile-pic.jpg"
+                        alt="User Pic"
+                        loading="lazy"
+                        class="cover"
+                      />
+                    </div>
+                    <blockquote class="testimonial-text">
+                      "The best investment we've made for our team. Easy to use,
+                      reliable, and the support team is always there when
+                      needed."
+                    </blockquote>
+                    <figcaption
+                      class="author-info d-flex justify-content-between align-items-end gap-3"
+                    >
+                      <div>
+                        <span class="author-name d-block">Sarah Johnson</span>
+                        <span class="author-title">Product Manager</span>
+                      </div>
+                      <div class="stars" aria-label="Rating: 5 stars">
+                        <span class="star">5.0 ★</span>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </li>
+              </ul>
+            </div>
+
+            <div class="dots-container" id="dots-container" role="tablist">
+              <!-- Dots will be generated dynamically -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- TESTIMONIALS SECTION ENDS -->
+
+      <!-- FAQ SECTION STARTS -->
+      <section id="faq-section" class="faq-section section-padding">
+        <div class="main-container">
+          <div class="content">
+            <h4 class="section-subheading" data-animate="fadeIn">
+              Frequently Asked Questions (FAQs)
+            </h4>
+            <h2
+              class="section-heading"
+              data-animate="fadeInUp"
+              data-animate-delay="200"
+            >
+              Got Questions? We've Got Answers.
+            </h2>
+
+            <div class="accordion" id="accordionExample">
+              <div
+                class="accordion-item mb-4"
+                data-animate="flipInX"
+                data-animate-delay="200"
+              >
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button d-flex align-items-center bg-white text-dark"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    <i class="fas fa-chevron-up me-4 accordion-icon"></i>
+                    What is web hosting and why do I need it ?
                   </button>
-                </th>
-                <th class="p-4 text-center border-start border-end-0">
-                  <span class="fw-bold fs-3 mb-2">Web Hosting 2</span>
-                  <span class="h4 fw-bold mb-1 fs-2">$ 24.50</span>
-                  <span class="text-muted small mb-3">
-                    ( On a 12 month plan )
-                  </span>
-                  <button class="btn btn-dark btn-sm py-3 px-5 rounded-4 fs-4">
-                    Register Now
+                </h2>
+                <div
+                  id="collapseOne"
+                  class="accordion-collapse collapse show"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body px-5 fs-4">
+                    <p class="accor-desc">
+                      Safety is our top priority. We ensure qualified
+                      instructors oversee all activities, maintain small group
+                      sizes for personalized attention hosting plans for
+                      sanitation.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="accordion-item mb-4"
+                data-animate="flipInX"
+                data-animate-delay="200"
+              >
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button d-flex align-items-center collapsed bg-white text-dark"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                    <i class="fas fa-chevron-up me-4 accordion-icon"></i>
+                    Which hosting plan is right for me ?
                   </button>
-                </th>
-                <th class="p-4 text-center">
-                  <span class="fw-bold fs-3 mb-2">Web Hosting 3</span>
-                  <span class="h4 fw-bold mb-1 fs-2">$ 24.50</span>
-                  <span class="text-muted small mb-3">
-                    ( On a 12 month plan )
-                  </span>
-                  <button class="btn btn-dark btn-sm py-3 px-5 rounded-4 fs-4">
-                    Register Now
+                </h2>
+                <div
+                  id="collapseTwo"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body px-5 fs-4">
+                    <p class="accor-desc">
+                      Safety is our top priority. We ensure qualified
+                      instructors oversee all activities, maintain small group
+                      sizes for personalized attention hosting plans for
+                      sanitation.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="accordion-item mb-4"
+                data-animate="flipInX"
+                data-animate-delay="200"
+              >
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button d-flex align-items-center collapsed bg-white text-dark"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    <i class="fas fa-chevron-up me-4 accordion-icon"></i>
+                    Can I upgrade my plan later ?
                   </button>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-4 fw-semibold border-end-0">Websites Hosted</td>
-                <td class="p-4 border-start border-end-0">Unlimited</td>
-                <td class="p-4 border-start border-end-0">Unlimited</td>
-                <td class="p-4">Unlimited</td>
-              </tr>
-              <tr>
-                <td class="p-4 fw-semibold border-end-0">Bandwidth</td>
-                <td class="p-4 border-start border-end-0">4 TB</td>
-                <td class="p-4 border-start border-end-0">12 TB</td>
-                <td class="p-4">14 TB</td>
-              </tr>
-              <tr>
-                <td class="p-4 fw-semibold border-end-0">CPU (Cores)</td>
-                <td class="p-4 border-start border-end-0">2 x 2.2GHz</td>
-                <td class="p-4 border-start border-end-0">2 x 2.2GHz</td>
-                <td class="p-4">2 x 2.2GHz</td>
-              </tr>
-              <tr>
-                <td class="p-4 fw-semibold border-end-0">Memory</td>
-                <td class="p-4 border-start border-end-0">4GB</td>
-                <td class="p-4 border-start border-end-0">4GB</td>
-                <td class="p-4">13 GB</td>
-              </tr>
-              <tr>
-                <td class="p-4 fw-semibold border-end-0">Free cPanel/WHM</td>
-                <td class="p-4 border-start border-end-0">Unlimited</td>
-                <td class="p-4 border-start border-end-0">Unlimited</td>
-                <td class="p-4">Unlimited</td>
-              </tr>
-              <tr>
-                <td class="p-4 fw-semibold border-end-0">Full Management</td>
-                <td class="p-4 border-start border-end-0">24/7 Support</td>
-                <td class="p-4 border-start border-end-0">24/7 Support</td>
-                <td class="p-4">24/7 Support</td>
-              </tr>
-              <tr>
-                <td class="p-4 fw-semibold border-end-0">
-                  Priority Technical Support
-                </td>
-                <td class="p-4 border-start border-end-0">
-                  <span class="feature-check">✓</span>
-                </td>
-                <td class="p-4 border-start border-end-0">
-                  <span class="feature-check">✓</span>
-                </td>
-                <td class="p-4">
-                  <span class="feature-check">✓</span>
-                </td>
-              </tr>
-              <tr>
-                <td class="p-4 fw-semibold border-end-0">
-                  7-Days MoneyBack Guarantee
-                </td>
-                <td class="p-4 border-start border-end-0">
-                  <span class="feature-check">✓</span>
-                </td>
-                <td class="p-4 border-start border-end-0">
-                  <span class="feature-check">✓</span>
-                </td>
-                <td class="p-4">
-                  <span class="feature-check">✓</span>
-                </td>
-              </tr>
-              <tr>
-                <td class="p-4 fw-semibold border-end-0">
-                  Multiple Server Locations
-                </td>
-                <td class="p-4 border-start border-end-0">Unlimited</td>
-                <td class="p-4 border-start border-end-0">Unlimited</td>
-                <td class="p-4">Unlimited</td>
-              </tr>
-            </tbody>
-          </table>
+                </h2>
+                <div
+                  id="collapseThree"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body px-5 fs-4">
+                    <p class="accor-desc">
+                      Safety is our top priority. We ensure qualified
+                      instructors oversee all activities, maintain small group
+                      sizes for personalized attention hosting plans for
+                      sanitation.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="accordion-item mb-3"
+                data-animate="flipInX"
+                data-animate-delay="200"
+              >
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button d-flex align-items-center collapsed bg-white text-dark"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour"
+                    aria-expanded="false"
+                    aria-controls="collapseFour"
+                  >
+                    <i class="fas fa-chevron-up me-4 accordion-icon"></i>
+                    Do you offer a money-back guarantee ?
+                  </button>
+                </h2>
+                <div
+                  id="collapseFour"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body px-5 fs-4">
+                    <p class="accor-desc">
+                      Safety is our top priority. We ensure qualified
+                      instructors oversee all activities, maintain small group
+                      sizes for personalized attention hosting plans for
+                      sanitation.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- FAQ SECTION ENDS -->
+    </main>
+
+    <!------------------------ Footer ------------------------>
+    <footer class="section-padding position-relative">
+      <div class="main-container" data-animate="fadeInUp">
+        <div class="content row g-4">
+          <div class="col-lg-4 mt-0">
+            <div class="d-flex align-items-center gap-3 mb-4">
+              <img
+                src="/images/logo.png"
+                alt="Hostina Logo"
+                loading="lazy"
+                class=""
+                style="width: 10%"
+              />
+              <h4 class="m-0 text-white fs-3">Hostina</h4>
+            </div>
+            <p class="fs-4 clr-text-dark" style="max-width: 70%">
+              Empowering your online presence with reliable hosting, expert
+              support, and honest pricing. Join thousands who trust us to keep
+              their websites secure, fast, and always online.
+            </p>
+          </div>
+          <div class="col-lg-8 row g-4 g-lg-0">
+            <div class="col-lg-3 col-6">
+              <h4 class="nav-title">Services</h4>
+              <ul>
+                <li><a href="#">Register Domain</a></li>
+                <li><a href="">Transfer Domain</a></li>
+                <li><a href="">Domain Search</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-6">
+              <h4 class="nav-title">Hosting</h4>
+              <ul>
+                <li><a href="">Shared Hosting</a></li>
+                <li><a href="">WordPress Hosting</a></li>
+                <li><a href="">Reseller Hosting</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-6">
+              <h4 class="nav-title">Services</h4>
+              <ul>
+                <li><a href="">Virtual Private Servers</a></li>
+                <li><a href="">Dedicated Servers</a></li>
+                <li><a href="">Game Servers</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-6">
+              <h4 class="nav-title">Contact Us</h4>
+              <ul>
+                <li>
+                  <a
+                    href="mailto:contact@company.com"
+                    class="d-flex gap-2 align-items-center"
+                    ><i class="fa-solid fa-envelope"></i> contact@company.com</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="tel:(414) 687 - 5892"
+                    class="d-flex gap-2 align-items-center"
+                    ><i class="fa-solid fa-phone"></i> (414) 687 - 5892</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="d-flex gap-2 align-items-center"
+                    ><i class="fa-solid fa-location-dot"></i> 794 Mcallister</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <ul class="social-links d-flex align-items-center gap-3">
+          <li class="social-item">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          </li>
+          <li class="social-item">
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          </li>
+          <li class="social-item">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          </li>
+        </ul>
+
+        <div class="copyright-text border-top col-lg-6 mx-auto">
+          <p class="fw-bold pt-4 text-center mb-0 clr-text-dark">
+            2025 Hostina. All Copyrights reserved.
+          </p>
         </div>
       </div>
-    </section>
-    <!-- COMPARISON SECTION ENDS -->
+
+      <figure class="position-absolute start-0 bottom-0" style="width: 15%">
+        <img src="/images/vector-334.png" alt="Vector" loading="lazy" />
+      </figure>
+
+      <div class="dots">
+        <div></div>
+        <div></div>
+      </div>
+    </footer>
 
     <!-- Bootstrap JS -->
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
       crossorigin="anonymous"
     ></script>
-    <script src="./src/js/main/app.js" type="module"></script>
-
-    <script>
-      // Simple price slider functionality
-      const slider = document.getElementById("priceSlider");
-      const tooltip = document.getElementById("priceTooltip");
-      const tooltipPrice = document.getElementById("tooltipPrice");
-      const toggleOptions = document.querySelectorAll(".toggle-option");
-
-      // Update tooltip position and show/hide
-      slider.addEventListener("input", function () {
-        const value = parseInt(this.value);
-        const percent = ((value - 100) / (180 - 100)) * 100;
-
-        tooltip.style.left = percent + "%";
-        tooltip.style.display = "block";
-        tooltipPrice.textContent = "$" + value;
-      });
-
-      // Show tooltip on hover/focus
-      slider.addEventListener("mouseenter", function () {
-        tooltip.style.display = "block";
-      });
-
-      slider.addEventListener("mouseleave", function () {
-        tooltip.style.display = "none";
-      });
-
-      // Toggle between Monthly/Yearly
-      toggleOptions.forEach((option) => {
-        option.addEventListener("click", function () {
-          toggleOptions.forEach((opt) => opt.classList.remove("active"));
-          this.classList.add("active");
-        });
-      });
-
-      // Initialize tooltip position
-      const initialValue = parseInt(slider.value);
-      const initialPercent = ((initialValue - 100) / (180 - 100)) * 100;
-      tooltip.style.left = initialPercent + "%";
-      tooltipPrice.textContent = "$" + initialValue;
-    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js"
+      integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK"
+      crossorigin="anonymous"
+    ></script>
+    <script src="src/assets/js/main/app.js" type="module"></script>
+    <script src="src/assets/js/main/price-slider.js" type="module"></script>
   </body>
 </html>

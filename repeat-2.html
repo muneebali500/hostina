@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Mobile Navigation - Hostina</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --color-primary: #1a1a2e;
+        --color-text-dark: #b8b8b8;
+      }
+
+      /*/////////////////////// #main-HEADER STYLE ////////////////////////*/
+      #main-header {
+        min-height: 8rem;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background-color: var(--color-primary);
+      }
+
+      #main-header .navbar-brand h4 {
+        font-size: 2rem;
+      }
+
+      #main-header .nav-item a {
+        color: var(--color-text-dark);
+        font-size: 1.5rem;
+        transition: 0.3s linear;
+      }
+
+      #main-header .nav-item > a:hover {
+        color: #fff;
+      }
+
+      #main-header .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        background-color: rgba(20, 20, 20, 1);
+        padding: 1rem;
+        border-radius: 10px;
+      }
+
+      #main-header .dropdown-item {
+        padding: 0.7rem 1rem;
+      }
+
+      #main-header .dropdown-item:hover {
+        color: #fff;
+        transform: translateX(3px);
+      }
+
+      #main-header .dropdown-item:focus,
+      #main-header .dropdown-item:hover {
+        background-color: rgba(255, 255, 255, 0.08);
+        border-radius: 8px;
+      }
+
+      #main-header .nav-link,
+      #main-header .nav-link:focus {
+        color: var(--color-text-dark);
+      }
+
+      #main-header .navbar-nav .nav-link.active,
+      #main-header .navbar-nav .nav-link.show {
+        color: #fff !important;
+      }
+
+      #main-header .navbar-toggler {
+        border: none;
+        padding: 0.25rem 0.5rem;
+        color: white !important;
+      }
+
+      #main-header .navbar-toggler:focus {
+        box-shadow: none;
+      }
+
+      #main-header .navbar-toggler i.bi-list {
+        font-size: 4rem;
+      }
+
+      #main-header select {
+        background-color: var(--color-primary) !important;
+        border-radius: 16px;
+        border: 1px solid #dddddda3;
+        padding: 1rem;
+        color: var(--color-text-dark) !important;
+      }
+
+      /* Modern Off-Canvas Mobile Menu */
+      .offcanvas-modern {
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        backdrop-filter: blur(20px);
+        border: none;
+        width: 320px !important;
+      }
+
+      .offcanvas-modern .offcanvas-header {
+        padding: 2rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .offcanvas-modern .offcanvas-title {
+        color: #fff;
+        font-size: 1.8rem;
+        font-weight: 600;
+      }
+
+      .offcanvas-modern .btn-close {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        padding: 0.8rem;
+        opacity: 0.8;
+        filter: invert(1);
+        transition: all 0.3s ease;
+      }
+
+      .offcanvas-modern .btn-close:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: rotate(90deg);
+        opacity: 1;
+      }
+
+      .offcanvas-modern .offcanvas-body {
+        padding: 1rem 2rem 2rem;
+      }
+
+      /* Mobile Navigation Items */
+      .mobile-nav-item {
+        margin-bottom: 0.5rem;
+      }
+
+      .mobile-nav-link {
+        display: flex;
+        align-items: center;
+        padding: 1rem 1.5rem;
+        color: var(--color-text-dark);
+        text-decoration: none;
+        border-radius: 12px;
+        transition: all 0.3s ease;
+        font-size: 1.1rem;
+        font-weight: 500;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .mobile-nav-link::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.1),
+          transparent
+        );
+        transition: left 0.5s ease;
+      }
+
+      .mobile-nav-link:hover::before {
+        left: 100%;
+      }
+
+      .mobile-nav-link:hover {
+        color: #fff;
+        background: rgba(255, 255, 255, 0.08);
+        transform: translateX(8px);
+      }
+
+      .mobile-nav-link i {
+        margin-right: 1rem;
+        font-size: 1.2rem;
+        width: 20px;
+        text-align: center;
+      }
+
+      /* Mobile Dropdowns */
+      .mobile-dropdown {
+        margin-bottom: 0.5rem;
+      }
+
+      .mobile-dropdown-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 1.5rem;
+        color: var(--color-text-dark);
+        text-decoration: none;
+        border-radius: 12px;
+        transition: all 0.3s ease;
+        font-size: 1.1rem;
+        font-weight: 500;
+        background: none;
+        border: none;
+        width: 100%;
+        text-align: left;
+      }
+
+      .mobile-dropdown-toggle:hover {
+        color: #fff;
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      .mobile-dropdown-toggle .dropdown-icon {
+        transition: transform 0.3s ease;
+      }
+
+      .mobile-dropdown-toggle[aria-expanded="true"] .dropdown-icon {
+        transform: rotate(180deg);
+      }
+
+      .mobile-dropdown-menu {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+        margin-top: 0.5rem;
+        padding: 0.5rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .mobile-dropdown-item {
+        display: block;
+        padding: 0.8rem 1rem;
+        color: var(--color-text-dark);
+        text-decoration: none;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        font-size: 1rem;
+      }
+
+      .mobile-dropdown-item:hover {
+        color: #fff;
+        background: rgba(255, 255, 255, 0.1);
+        transform: translateX(5px);
+      }
+
+      /* Account Section */
+      .mobile-account-section {
+        margin-top: 2rem;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .mobile-currency-selector {
+        background: rgba(255, 255, 255, 0.08) !important;
+        border: 1px solid rgba(255, 255, 255, 0.2) !important;
+        border-radius: 12px !important;
+        padding: 0.8rem 1rem !important;
+        color: #fff !important;
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+
+      .mobile-currency-selector:focus {
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+      }
+
+      /* Animations */
+      @keyframes slideInRight {
+        from {
+          transform: translateX(100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+
+      .offcanvas-modern.show {
+        animation: slideInRight 0.3s ease-out;
+      }
+
+      /* Hide regular collapse on mobile */
+      @media (max-width: 991.98px) {
+        .navbar-collapse {
+          display: none !important;
+        }
+      }
+
+      /* Demo content */
+      .demo-content {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        padding: 4rem 0;
+      }
+
+      .demo-content h1 {
+        color: white;
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      .demo-content p {
+        color: rgba(255, 255, 255, 0.8);
+        text-align: center;
+        font-size: 1.2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Modern Header -->
+    <header id="main-header" class="py-3 shadow-sm d-flex align-items-center">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg p-0">
+          <!-- Logo on the left -->
+          <a class="navbar-brand d-flex align-items-center me-auto" href="/">
+            <div
+              style="
+                width: 40px;
+                height: 40px;
+                background: #fff;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 0.5rem;
+              "
+            >
+              <i class="fas fa-server" style="color: var(--color-primary)"></i>
+            </div>
+            <h4 class="m-0 text-white">Hostina</h4>
+          </a>
+
+          <!-- Modern hamburger menu for mobile -->
+          <button
+            class="navbar-toggler d-lg-none"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#mobileNavOffcanvas"
+            aria-controls="mobileNavOffcanvas"
+          >
+            <i class="bi bi-list"></i>
+          </button>
+
+          <!-- Desktop Navigation (hidden on mobile) -->
+          <div class="navbar-collapse d-none d-lg-flex">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item px-3 dropdown">
+                <a
+                  class="nav-link d-flex align-items-center gap-3"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                >
+                  Domains <i class="fas fa-angle-down"></i>
+                </a>
+                <ul
+                  class="dropdown-menu p-3 fast-animation"
+                  data-animate="fadeInUp"
+                >
+                  <li><a class="dropdown-item" href="#">Domain Search</a></li>
+                  <li><a class="dropdown-item" href="#">Domain Transfer</a></li>
+                  <li><a class="dropdown-item" href="#">Domain Pricing</a></li>
+                </ul>
+              </li>
+              <li class="nav-item px-3 dropdown">
+                <a
+                  class="nav-link d-flex align-items-center gap-3"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                >
+                  Hosting <i class="fas fa-angle-down"></i>
+                </a>
+                <ul
+                  class="dropdown-menu p-3 fast-animation"
+                  data-animate="fadeInUp"
+                >
+                  <li><a class="dropdown-item" href="#">Shared Hosting</a></li>
+                  <li><a class="dropdown-item" href="#">VPS Hosting</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Dedicated Servers</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item px-3 dropdown">
+                <a
+                  class="nav-link d-flex align-items-center gap-3"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                >
+                  Services <i class="fas fa-angle-down"></i>
+                </a>
+                <ul
+                  class="dropdown-menu p-3 fast-animation"
+                  data-animate="fadeInUp"
+                >
+                  <li>
+                    <a class="dropdown-item" href="#">SSL Certificates</a>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Website Builder</a></li>
+                  <li><a class="dropdown-item" href="#">Email Hosting</a></li>
+                </ul>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link" href="/contact.html">Contact Us</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link" href="/blogs">Blogs</a>
+              </li>
+            </ul>
+
+            <div class="d-flex align-items-center gap-3">
+              <div class="dropdown">
+                <select class="dark-arrow">
+                  <option value="USD">USD</option>
+                  <option value="EGP">EGP</option>
+                  <option value="EUR">EUR</option>
+                </select>
+              </div>
+              <div class="nav-item px-3 dropdown">
+                <a
+                  class="nav-link d-flex align-items-center gap-3"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                >
+                  <i class="fa-solid fa-user"></i>
+                  Account <i class="fas fa-angle-down"></i>
+                </a>
+                <ul
+                  class="dropdown-menu p-3 fast-animation"
+                  data-animate="fadeInUp"
+                >
+                  <li><a class="dropdown-item" href="#">Profile</a></li>
+                  <li><a class="dropdown-item" href="#">Settings</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Modern Mobile Off-Canvas Navigation -->
+    <div
+      class="offcanvas offcanvas-end offcanvas-modern"
+      tabindex="-1"
+      id="mobileNavOffcanvas"
+      aria-labelledby="mobileNavOffcanvasLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="mobileNavOffcanvasLabel">
+          <i class="fas fa-server me-2"></i>Hostina
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <!-- Mobile Navigation Items -->
+        <div class="mobile-nav-item">
+          <div class="mobile-dropdown">
+            <button
+              class="mobile-dropdown-toggle"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#mobileDomainsMenu"
+              aria-expanded="false"
+            >
+              <span><i class="fas fa-globe me-3"></i>Domains</span>
+              <i class="fas fa-chevron-down dropdown-icon"></i>
+            </button>
+            <div class="collapse mobile-dropdown-menu" id="mobileDomainsMenu">
+              <a class="mobile-dropdown-item" href="#">Domain Search</a>
+              <a class="mobile-dropdown-item" href="#">Domain Transfer</a>
+              <a class="mobile-dropdown-item" href="#">Domain Pricing</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mobile-nav-item">
+          <div class="mobile-dropdown">
+            <button
+              class="mobile-dropdown-toggle"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#mobileHostingMenu"
+              aria-expanded="false"
+            >
+              <span><i class="fas fa-server me-3"></i>Hosting</span>
+              <i class="fas fa-chevron-down dropdown-icon"></i>
+            </button>
+            <div class="collapse mobile-dropdown-menu" id="mobileHostingMenu">
+              <a class="mobile-dropdown-item" href="#">Shared Hosting</a>
+              <a class="mobile-dropdown-item" href="#">VPS Hosting</a>
+              <a class="mobile-dropdown-item" href="#">Dedicated Servers</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mobile-nav-item">
+          <div class="mobile-dropdown">
+            <button
+              class="mobile-dropdown-toggle"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#mobileServicesMenu"
+              aria-expanded="false"
+            >
+              <span><i class="fas fa-tools me-3"></i>Services</span>
+              <i class="fas fa-chevron-down dropdown-icon"></i>
+            </button>
+            <div class="collapse mobile-dropdown-menu" id="mobileServicesMenu">
+              <a class="mobile-dropdown-item" href="#">SSL Certificates</a>
+              <a class="mobile-dropdown-item" href="#">Website Builder</a>
+              <a class="mobile-dropdown-item" href="#">Email Hosting</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mobile-nav-item">
+          <a class="mobile-nav-link" href="/contact.html">
+            <i class="fas fa-envelope"></i>Contact Us
+          </a>
+        </div>
+
+        <div class="mobile-nav-item">
+          <a class="mobile-nav-link" href="/blogs">
+            <i class="fas fa-blog"></i>Blogs
+          </a>
+        </div>
+
+        <!-- Account Section -->
+        <div class="mobile-account-section">
+          <select class="mobile-currency-selector">
+            <option value="USD">🇺🇸 USD</option>
+            <option value="EGP">🇪🇬 EGP</option>
+            <option value="EUR">🇪🇺 EUR</option>
+          </select>
+
+          <div class="mobile-dropdown">
+            <button
+              class="mobile-dropdown-toggle"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#mobileAccountMenu"
+              aria-expanded="false"
+            >
+              <span><i class="fas fa-user me-3"></i>Account</span>
+              <i class="fas fa-chevron-down dropdown-icon"></i>
+            </button>
+            <div class="collapse mobile-dropdown-menu" id="mobileAccountMenu">
+              <a class="mobile-dropdown-item" href="#">Profile</a>
+              <a class="mobile-dropdown-item" href="#">Settings</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Demo Content -->
+    <div class="demo-content">
+      <div class="container">
+        <h1>Modern Mobile Navigation Demo</h1>
+        <p>
+          Click the hamburger menu on mobile to see the sleek off-canvas
+          navigation!
+        </p>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

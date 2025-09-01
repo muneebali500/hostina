@@ -106,7 +106,7 @@
 /* /////////////////////////////////////////////////////// */
 #features-home .card {
   border-radius: var(--radius-24);
-  box-shadow: var(--drop-shaow);
+  box-shadow: var(--drop-shadow);
   border: none;
   transition: var(--transition-bounce);
   overflow: hidden;
@@ -133,6 +133,10 @@
 
 #features-home .card:hover::before {
   transform: scaleX(1);
+}
+
+#features-home .card.active {
+  background-color: var(--color-primary);
 }
 
 #features-home figure {
@@ -166,62 +170,8 @@
   font-size: 1.2rem;
 }
 
-/* /////////////////// CHOICE HOME STYLES /////////////// */
-/* /////////////////////////////////////////////////////// */
-#choice-home .cards-container .card-item {
-  border-radius: var(--radius-24);
-  box-shadow: var(--drop-shaow);
-  gap: 2rem;
-  overflow: hidden;
-  transform: rotate(0deg);
-  transition: all 0.3s ease;
-}
-
-#choice-home .cards-container .card-item:hover {
-  transform: translateY(-5px) !important;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
-}
-
-#choice-home .cards-container .card-num {
-  border-radius: 50%;
-  transition: transform 0.3s ease;
-}
-
-.card-item:hover .card-num {
-  transform: scale(1.1) rotate(10deg);
-}
-
-#choice-home .cards-container .card-num span {
-  background-color: #f3f3f3;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  height: 4rem;
-  width: 4rem;
-  border-radius: 50%;
-  font-size: 1.4rem;
-  font-weight: 600;
-}
-
-#choice-home .cards-container .card-title {
-  font-size: 1.8rem;
-  transform: rotate(0deg);
-  transition: 0.3s ease;
-}
-
-#choice-home .cards-container .card-desc {
-  font-size: 1.2rem;
-  padding-right: 2rem;
-  color: var(--color-text);
-  margin-bottom: 0;
-}
-
-#choice-home .card-item:hover {
-  background-color: var(--color-primary);
-}
-
-#choice-home .card-item:hover .card-title {
-  color: #fff;
+#features-home .card.active .card-desc {
+  color: var(--color-text-dark);
 }
 
 /* /////////////////// BANNER HOME STYLES /////////////// */
@@ -259,6 +209,7 @@
     radial-gradient(3px 3px at 60% 20%, rgba(255, 255, 255, 0.8), transparent);
   background-size: 100% 100%;
   background-repeat: no-repeat;
+  z-index: -1;
 }
 
 #banner-home .section-heading {
@@ -269,97 +220,19 @@
   font-size: 2rem;
 }
 
-#banner-home .left-side button {
-  padding: 1.4rem 3rem;
-  background-color: white;
-  border-radius: var(--radius-16);
-  font-size: 1.6rem;
-  font-weight: 600;
-}
-
 #banner-home .right-side {
   position: absolute;
   bottom: 0;
   right: 0;
 }
 
-/* /////////////////// ACADEMY HOME STYLES /////////////// */
-/* /////////////////////////////////////////////////////// */
-#academy-home .card-item {
-  border-radius: 32px;
-  overflow: hidden;
-  box-shadow: var(--drop-shaow);
-  transition: 0.3s linear;
-}
-
-#academy-home figure {
-  height: 20rem;
-  width: 100%;
-}
-
-#academy-home figure img {
-  transition: 0.3s linear;
-}
-
-#academy-home .card-item:hover img {
-  transform: scale(1.05);
-}
-
-#academy-home .card-title {
-  font-size: 1.6rem;
-  font-weight: 800;
-  letter-spacing: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0.4rem;
-  margin-bottom: 1rem;
-}
-
-#academy-home .card-date {
-  font-size: 1rem;
-  color: #6e6e6e;
-  font-weight: 700;
-}
-
-#academy-home .card-desc {
-  font-size: 1.4rem;
-  color: var(--color-text);
-  margin-bottom: 2rem;
-}
-
-#academy-home .btn {
-  width: 100%;
-  font-size: 1.2rem;
-  padding: 0.7rem;
-}
-
 /* //////////////////// MEDIA QUESRIES ///////////////// */
 /* ///////////////////////////////////////////////////// */
 @media (max-width: 1023px) {
-  .testimonial-card {
-    min-width: calc(50% - 15px);
-  }
 }
 
 @media (max-width: 767px) {
   #hero-home {
     min-height: 700px;
-  }
-
-  #testimonials-section .section-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
-    padding: 30px 30px 20px;
-  }
-
-  .testimonials-container {
-    padding: 20px 30px 40px;
-  }
-
-  .testimonial-card {
-    min-width: calc(100% - 0px);
-    margin-right: 0;
   }
 }

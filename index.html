@@ -52,8 +52,7 @@
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.png" />
-    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logo.png" />
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
@@ -91,13 +90,213 @@
     />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="./src/assets/styles/main/globals.css" />
-    <link rel="stylesheet" href="./src/assets/styles/main/header.css" />
-    <link rel="stylesheet" href="./src/assets/styles/main/footer.css" />
-    <link rel="stylesheet" href="./src/assets/styles/main/common.css" />
-    <link rel="stylesheet" href="./src/assets/styles/main/home.css" />
+    <link rel="stylesheet" href="src/assets/styles/main/globals.css" />
+    <link rel="stylesheet" href="src/assets/styles/main/header.css" />
+    <link rel="stylesheet" href="src/assets/styles/main/footer.css" />
+    <link rel="stylesheet" href="src/assets/styles/main/common.css" />
+    <link rel="stylesheet" href="src/assets/styles/main/home.css" />
   </head>
   <body>
+    <header id="main-header" class="py-3 shadow-sm d-flex align-items-center">
+      <div class="main-container">
+        <nav class="navbar navbar-expand-lg p-0">
+          <a
+            class="navbar-brand d-flex align-items-center me-auto"
+            href="index.html"
+          >
+            <img
+              src="/images/logo.png"
+              alt="Hostina Logo"
+              class="me-2"
+              loading="lazy"
+            />
+            <h4 class="m-0 text-white">Hostina</h4>
+          </a>
+
+          <button
+            class="navbar-toggler ms-3"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <i class="bi bi-list"></i>
+          </button>
+
+          <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header p-4">
+              <img
+                src="/images/logo.png"
+                alt="Hostina Logo"
+                loading="lazy"
+                style="width: 35px"
+                class="me-2"
+              />
+              <h5 class="offcanvas-title fs-2" id="offcanvasNavbarLabel">
+                Hostina
+              </h5>
+              <button
+                type="button"
+                class="btn-close me-3"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul
+                class="navbar-nav justify-content-center align-items-lg-center flex-grow-1 pe-3"
+              >
+                <li class="nav-item px-3 dropdown">
+                  <a
+                    class="nav-link d-flex align-items-center justify-content-between gap-3"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                  >
+                    Domains <i class="fas fa-angle-down"></i>
+                  </a>
+                  <ul
+                    class="dropdown-menu p-3 fast-animation"
+                    data-animate="fadeInUp"
+                  >
+                    <li>
+                      <a class="dropdown-item" href="domains.html"
+                        >Domain Search</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Domain Transfer</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Domain Pricing</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item px-3 dropdown">
+                  <a
+                    class="nav-link d-flex align-items-center justify-content-between gap-3"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                  >
+                    Hosting <i class="fas fa-angle-down"></i>
+                  </a>
+                  <ul
+                    class="dropdown-menu p-3 fast-animation"
+                    data-animate="fadeInUp"
+                  >
+                    <li>
+                      <a class="dropdown-item" href="hosting-details.html"
+                        >Shared Hosting</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="vps-hosting.html"
+                        >VPS Hosting</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="dedicated-hosting.html"
+                        >Dedicated Servers</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="games-hosting.html"
+                        >Games Hosting</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item px-3 dropdown">
+                  <a
+                    class="nav-link d-flex align-items-center justify-content-between gap-3"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                  >
+                    Servers <i class="fas fa-angle-down"></i>
+                  </a>
+                  <ul
+                    class="dropdown-menu p-3 fast-animation"
+                    data-animate="fadeInUp"
+                  >
+                    <li>
+                      <a class="dropdown-item" href="servers.html">Servers</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">SSL Certificates</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Website Builder</a>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Email Hosting</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item px-3">
+                  <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+                <li class="nav-item px-3">
+                  <a class="nav-link" href="blogs.html">Blogs</a>
+                </li>
+              </ul>
+
+              <div
+                class="d-flex flex-column flex-lg-row align-items-lg-center gap-3 mt-3 mt-lg-0 p-3 p-lg-0"
+              >
+                <div class="dropdown">
+                  <select class="dark-arrow">
+                    <option value="USD">
+                      <i class="bi bi-flag-fill me-2"></i>USD
+                    </option>
+                    <option value="EGP">
+                      <i class="bi bi-flag-fill me-2"></i>EGP
+                    </option>
+                    <option value="EUR">
+                      <i class="bi bi-flag-fill me-2"></i>EUR
+                    </option>
+                  </select>
+                </div>
+
+                <a href="login.html" class="btn sign-up-btn d-none">
+                  Sign Up
+                </a>
+
+                <div class="nav-item dropdown p-2">
+                  <a
+                    class="nav-link d-flex align-items-center justify-content-between gap-3"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                  >
+                    <span>
+                      <i class="fa-solid fa-user me-2"></i>
+                      Account
+                    </span>
+                    <i class="fas fa-angle-down"></i>
+                  </a>
+                  <ul
+                    class="dropdown-menu p-3 fast-animation w-100"
+                    data-animate="fadeInUp"
+                  >
+                    <li>
+                      <a class="dropdown-item" href="#">Profile</a>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
     <main>
       <section
         id="hero-home"
@@ -113,7 +312,7 @@
                 Super & Best Ultrafast Hosting Solutions
               </h1>
               <p
-                class="description col-lg-11 mx-auto"
+                class="description col-lg-11 mx-auto clr-text-dark"
                 data-animate="fadeInUp"
                 data-animate-delay="200"
               >
@@ -157,128 +356,128 @@
       <!-- FEATURES SECTION STARTS -->
       <section id="features-home" class="features-home section-padding">
         <div class="main-container">
-          <div>
+          <div class="content">
             <h4 class="section-subheading" data-animate="fadeIn">
               Our Features
             </h4>
             <h2
-              class="section-heading mb-4 mb-lg-5"
+              class="section-heading"
               data-animate="fadeInUp"
               data-animate-delay="100"
             >
               Everything You Need to Succeed Online
             </h2>
+
+            <ul class="cards-container row g-4">
+              <!-- Feature 1 -->
+              <li class="col-md-6 col-lg-3" data-animate="fadeInUp">
+                <div class="card h-100 p-5 p-md-4">
+                  <div class="d-flex flex-column">
+                    <figure class="mb-4">
+                      <img
+                        src="/images/fast.gif"
+                        alt="Fast Performance"
+                        loading="lazy"
+                        class="img-fluid h-100 w-100 object-fit-cover rounded-3"
+                        style="background-color: #f5f5f5; padding: 5px"
+                      />
+                    </figure>
+                    <h3 class="card-heading fw-semibold">
+                      Lightning-Fast Performance
+                    </h3>
+                    <p class="card-desc mt-2 mb-0">
+                      Our ultra-modern servers and premium infrastructure ensure
+                      your site loads instantly—delighting your visitors and
+                      boosting your search engine ranking.
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Feature 2 -->
+              <li
+                class="col-md-6 col-lg-3"
+                data-animate="fadeInUp"
+                data-animate-delay="100"
+              >
+                <div class="card h-100 p-5 p-md-4 active">
+                  <div class="d-flex flex-column">
+                    <figure class="mb-4">
+                      <img
+                        src="/images/support.gif"
+                        alt="Expert Support"
+                        loading="lazy"
+                        class="img-fluid h-100 w-100 object-fit-cover rounded-3"
+                        style="padding: 5px"
+                      />
+                    </figure>
+                    <h3 class="card-heading fw-semibold text-white">
+                      24/7 Expert Support
+                    </h3>
+                    <p class="card-desc mt-2 mb-0">
+                      Our friendly, experienced support team is here for you—day
+                      or night. Get real answers, fast, whenever you need help.
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Feature 3 -->
+              <li
+                class="col-md-6 col-lg-3"
+                data-animate="fadeInUp"
+                data-animate-delay="200"
+              >
+                <div class="card h-100 p-5 p-md-4">
+                  <div class="d-flex flex-column">
+                    <figure class="mb-4">
+                      <img
+                        src="/images/uptime.gif"
+                        alt="Uptime Guarantee"
+                        loading="lazy"
+                        class="img-fluid h-100 w-100 object-fit-contain rounded-3"
+                      />
+                    </figure>
+                    <h3 class="card-heading fw-semibold">
+                      99.9% Uptime Guarantee
+                    </h3>
+                    <p class="card-desc mt-2 mb-0">
+                      Reliability matters. Our robust network and proactive
+                      monitoring deliver rock-solid uptime so your business is
+                      always open to the world.
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Feature 4 -->
+              <li
+                class="col-md-6 col-lg-3"
+                data-animate="fadeInUp"
+                data-animate-delay="300"
+              >
+                <div class="card h-100 p-5 p-md-4">
+                  <div class="d-flex flex-column">
+                    <figure class="mb-4">
+                      <img
+                        src="/images/security.gif"
+                        alt="Advanced Security"
+                        loading="lazy"
+                        class="img-fluid h-100 w-100 object-fit-cover rounded-3"
+                        style="background-color: #f5f5f5; padding: 5px"
+                      />
+                    </figure>
+                    <h3 class="card-heading fw-semibold">Advanced Security</h3>
+                    <p class="card-desc mt-2 mb-0">
+                      We protect your site with firewalls, malware scanning, and
+                      DDoS mitigation, so you can focus on your business—not on
+                      threats.
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
           </div>
-
-          <ul class="cards-container row g-4">
-            <!-- Feature 1 -->
-            <li class="col-md-6 col-lg-3" data-animate="fadeInUp">
-              <div class="card h-100 p-5 p-md-4">
-                <div class="d-flex flex-column">
-                  <figure class="mb-4">
-                    <img
-                      src="/images/fast.gif"
-                      alt="Fast Performance"
-                      loading="lazy"
-                      class="img-fluid h-100 w-100 object-fit-cover rounded-3"
-                      style="background-color: #f5f5f5; padding: 5px"
-                    />
-                  </figure>
-                  <h3 class="card-heading fw-semibold">
-                    Lightning-Fast Performance
-                  </h3>
-                  <p class="card-desc mt-2 mb-0">
-                    Our ultra-modern servers and premium infrastructure ensure
-                    your site loads instantly—delighting your visitors and
-                    boosting your search engine ranking.
-                  </p>
-                </div>
-              </div>
-            </li>
-
-            <!-- Feature 2 -->
-            <li
-              class="col-md-6 col-lg-3"
-              data-animate="fadeInUp"
-              data-animate-delay="100"
-            >
-              <div class="card h-100 p-5 p-md-4 bg-black">
-                <div class="d-flex flex-column">
-                  <figure class="mb-4">
-                    <img
-                      src="/images/support.gif"
-                      alt="Expert Support"
-                      loading="lazy"
-                      class="img-fluid h-100 w-100 object-fit-cover rounded-3"
-                      style="padding: 5px"
-                    />
-                  </figure>
-                  <h3 class="card-heading fw-semibold text-white">
-                    24/7 Expert Support
-                  </h3>
-                  <p class="card-desc mt-2 mb-0">
-                    Our friendly, experienced support team is here for you—day
-                    or night. Get real answers, fast, whenever you need help.
-                  </p>
-                </div>
-              </div>
-            </li>
-
-            <!-- Feature 3 -->
-            <li
-              class="col-md-6 col-lg-3"
-              data-animate="fadeInUp"
-              data-animate-delay="200"
-            >
-              <div class="card h-100 p-5 p-md-4">
-                <div class="d-flex flex-column">
-                  <figure class="mb-4">
-                    <img
-                      src="/images/uptime.gif"
-                      alt="Uptime Guarantee"
-                      loading="lazy"
-                      class="img-fluid h-100 w-100 object-fit-contain rounded-3"
-                    />
-                  </figure>
-                  <h3 class="card-heading fw-semibold">
-                    99.9% Uptime Guarantee
-                  </h3>
-                  <p class="card-desc mt-2 mb-0">
-                    Reliability matters. Our robust network and proactive
-                    monitoring deliver rock-solid uptime so your business is
-                    always open to the world.
-                  </p>
-                </div>
-              </div>
-            </li>
-
-            <!-- Feature 4 -->
-            <li
-              class="col-md-6 col-lg-3"
-              data-animate="fadeInUp"
-              data-animate-delay="300"
-            >
-              <div class="card h-100 p-5 p-md-4">
-                <div class="d-flex flex-column">
-                  <figure class="mb-4">
-                    <img
-                      src="/images/security.gif"
-                      alt="Advanced Security"
-                      loading="lazy"
-                      class="img-fluid h-100 w-100 object-fit-cover rounded-3"
-                      style="background-color: #f5f5f5; padding: 5px"
-                    />
-                  </figure>
-                  <h3 class="card-heading fw-semibold">Advanced Security</h3>
-                  <p class="card-desc mt-2 mb-0">
-                    We protect your site with firewalls, malware scanning, and
-                    DDoS mitigation, so you can focus on your business—not on
-                    threats.
-                  </p>
-                </div>
-              </div>
-            </li>
-          </ul>
         </div>
       </section>
 
@@ -287,9 +486,9 @@
         <div class="main-container">
           <div class="content">
             <!-- Animated Headings -->
-            <div class="section-subheading" data-animate="fadeIn">
+            <h4 class="section-subheading" data-animate="fadeIn">
               Our Pricing
-            </div>
+            </h4>
             <h2
               class="section-heading"
               data-animate="fadeInUp"
@@ -523,12 +722,12 @@
               </li>
               <li class="col-md-6" data-animate="fadeInRight">
                 <div
-                  class="card-item position-relative h-100 d-flex justify-content-center align-items-start align-items-lg-center py-5 px-4 bg-black"
+                  class="card-item position-relative h-100 d-flex justify-content-center align-items-start align-items-lg-center py-5 px-4"
                 >
                   <div class="card-num bg-white"><span>02</span></div>
                   <div>
-                    <h3 class="card-title fw-semibold mb-3 text-white">
-                      Ultra-Fast Performance ِAny Time
+                    <h3 class="card-title fw-semibold mb-3">
+                      Flexible Plans & Affordable Pricing
                     </h3>
                     <p class="card-desc">
                       We provide hosting packages suitable for all types of
@@ -566,7 +765,7 @@
                 <div
                   class="card-item position-relative h-100 d-flex justify-content-center align-items-start align-items-lg-center py-5 px-4"
                 >
-                  <div class="card-num"><span>01</span></div>
+                  <div class="card-num"><span>04</span></div>
                   <div>
                     <h3 class="card-title fw-semibold mb-3">
                       Comprehensive & Advanced Security
@@ -596,12 +795,12 @@
               <h2 class="section-heading text-white">
                 Premium Web Hosting For Every Website
               </h2>
-              <p class="description mb-5">
+              <p class="description mb-5 clr-text-dark">
                 Enjoy lightning-fast, secure, and scalable web hosting tailored
                 for all types of websites — from personal blogs and portfolios
                 to business websites
               </p>
-              <button class="btn-pulse">See Pricing</button>
+              <button class="btn secondary-btn">See Pricing</button>
             </div>
           </div>
           <div class="right-side d-none d-lg-block img-float">
@@ -624,7 +823,9 @@
                 <div
                   class="card-item position-relative h-100 d-flex align-items-start align-items-lg-center py-5 px-4"
                 >
-                  <div class="card-num"><span>01</span></div>
+                  <div class="card-num">
+                    <span><i class="fas fa-box-open"></i></span>
+                  </div>
                   <div>
                     <h3 class="card-title fw-semibold mb-3">
                       The Full Package Included Here
@@ -637,6 +838,7 @@
                   </div>
                 </div>
               </li>
+
               <li
                 class="col-md-6 w-100"
                 data-animate="fadeInLeft"
@@ -645,7 +847,9 @@
                 <div
                   class="card-item position-relative h-100 d-flex align-items-start align-items-lg-center py-5 px-4"
                 >
-                  <div class="card-num"><span>02</span></div>
+                  <div class="card-num">
+                    <span><i class="fas fa-infinity"></i></span>
+                  </div>
                   <div>
                     <h3 class="card-title fw-semibold">Unlimited Bandwidth</h3>
                     <p class="card-desc">
@@ -705,7 +909,7 @@
               Tips, Insights, and Updates for Your Online Success
             </h2>
             <ul class="cards-container row g-4">
-              <li class="col-md-4" data-animate="fadeInLeft">
+              <li class="col-md-6 col-lg-4" data-animate="fadeInLeft">
                 <div class="card-item card-hover-effect">
                   <div class="card-top">
                     <figure>
@@ -726,13 +930,13 @@
                       Stronger focus on privacy, AI-based security, GDPR
                       compliance, and secure cloud solutions shaped data
                     </p>
-                    <button class="btn btn-dark rounded-4">
-                      Continue Reading
+                    <button class="btn primary-btn">
+                      <a href="">Continue Reading</a>
                     </button>
                   </div>
                 </div>
               </li>
-              <li class="col-md-4" data-animate="fadeInUp">
+              <li class="col-md-6 col-lg-4" data-animate="fadeInUp">
                 <div class="card-item card-hover-effect">
                   <div class="card-top">
                     <figure>
@@ -753,13 +957,13 @@
                       Stronger focus on privacy, AI-based security, GDPR
                       compliance, and secure cloud solutions shaped data
                     </p>
-                    <button class="btn btn-dark rounded-4">
-                      Continue Reading
+                    <button class="btn primary-btn">
+                      <a href="">Continue Reading</a>
                     </button>
                   </div>
                 </div>
               </li>
-              <li class="col-md-4" data-animate="fadeInRight">
+              <li class="col-md-6 col-lg-4" data-animate="fadeInRight">
                 <div class="card-item card-hover-effect">
                   <div class="card-top">
                     <figure>
@@ -780,8 +984,8 @@
                       Stronger focus on privacy, AI-based security, GDPR
                       compliance, and secure cloud solutions shaped data
                     </p>
-                    <button class="btn btn-dark rounded-4">
-                      Continue Reading
+                    <button class="btn primary-btn">
+                      <a href="">Continue Reading</a>
                     </button>
                   </div>
                 </div>
@@ -958,20 +1162,20 @@
         <div class="main-container">
           <div class="section-header">
             <div>
-              <p
+              <h4
                 class="section-subheading"
                 id="testimonials-subheading"
                 data-animate="fadeIn"
               >
-                Faqs
-              </p>
+                Kudos
+              </h4>
               <h2
                 class="section-heading mb-0"
                 id="testimonials-heading"
                 data-animate="fadeInUp"
                 data-animate-delay="200"
               >
-                Real Stories. Real Success.
+                Client's Review
               </h2>
             </div>
             <div class="nav-controls">
@@ -1186,6 +1390,108 @@
       </section>
     </main>
 
+    <!------------------------ Footer ------------------------>
+    <footer class="section-padding position-relative">
+      <div class="main-container" data-animate="fadeInUp">
+        <div class="content row g-4">
+          <div class="col-lg-4 mt-0">
+            <div class="d-flex align-items-center gap-3 mb-4">
+              <img
+                src="/images/logo.png"
+                alt="Hostina Logo"
+                loading="lazy"
+                class=""
+                style="width: 10%"
+              />
+              <h4 class="m-0 text-white fs-3">Hostina</h4>
+            </div>
+            <p class="fs-4 clr-text-dark" style="max-width: 70%">
+              Empowering your online presence with reliable hosting, expert
+              support, and honest pricing. Join thousands who trust us to keep
+              their websites secure, fast, and always online.
+            </p>
+          </div>
+          <div class="col-lg-8 row g-4 g-lg-0">
+            <div class="col-lg-3 col-6">
+              <h4 class="nav-title">Services</h4>
+              <ul>
+                <li><a href="#">Register Domain</a></li>
+                <li><a href="">Transfer Domain</a></li>
+                <li><a href="">Domain Search</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-6">
+              <h4 class="nav-title">Hosting</h4>
+              <ul>
+                <li><a href="">Shared Hosting</a></li>
+                <li><a href="">WordPress Hosting</a></li>
+                <li><a href="">Reseller Hosting</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-6">
+              <h4 class="nav-title">Services</h4>
+              <ul>
+                <li><a href="">Virtual Private Servers</a></li>
+                <li><a href="">Dedicated Servers</a></li>
+                <li><a href="">Game Servers</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-6">
+              <h4 class="nav-title">Contact Us</h4>
+              <ul>
+                <li>
+                  <a
+                    href="mailto:contact@company.com"
+                    class="d-flex gap-2 align-items-center"
+                    ><i class="fa-solid fa-envelope"></i> contact@company.com</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="tel:(414) 687 - 5892"
+                    class="d-flex gap-2 align-items-center"
+                    ><i class="fa-solid fa-phone"></i> (414) 687 - 5892</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="d-flex gap-2 align-items-center"
+                    ><i class="fa-solid fa-location-dot"></i> 794 Mcallister</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <ul class="social-links d-flex align-items-center gap-3">
+          <li class="social-item">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          </li>
+          <li class="social-item">
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          </li>
+          <li class="social-item">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          </li>
+        </ul>
+
+        <div class="copyright-text border-top col-lg-6 mx-auto">
+          <p class="fw-bold pt-4 text-center mb-0 clr-text-dark">
+            2025 Hostina. All Copyrights reserved.
+          </p>
+        </div>
+      </div>
+
+      <figure class="position-absolute start-0 bottom-0" style="width: 15%">
+        <img src="/images/vector-334.png" alt="Vector" loading="lazy" />
+      </figure>
+
+      <div class="dots">
+        <div></div>
+        <div></div>
+      </div>
+    </footer>
+
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -1196,6 +1502,6 @@
       integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK"
       crossorigin="anonymous"
     ></script>
-    <script src="./src/js/main/app.js" type="module"></script>
+    <script src="src/assets/js/main/app.js" type="module"></script>
   </body>
 </html>

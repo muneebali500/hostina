@@ -7,19 +7,20 @@
 :root {
   /* Custom Colors */
   --color-primary: #000000;
-  --color-text: #a7a7a7;
-  --color-light-gray: #f6f6f6;
+  --color-light-gray: #ebebebb2;
   --color-secondary: #28a745;
+  --color-text: #6e6e6e;
+  --color-text-dark: #a7a7a7;
 
   --radius-16: 16px;
   --radius-24: 24px;
   --radius-28: 28px;
   --radius-18: 18px;
 
-  --drop-shaow: 9.34px 16.01px 28.02px 0 #184f780d,
+  --drop-shadow: 9.34px 16.01px 28.02px 0 #184f780d,
     -9.34px -16.01px 28.02px 0 #184f780d;
 
-  --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.1);
   --shadow-md: 0 10px 15px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 20px 25px rgba(0, 0, 0, 0.1);
   --shadow-xl: 0 25px 50px rgba(0, 0, 0, 0.25);
@@ -64,16 +65,15 @@ a {
   color: inherit;
 }
 
-input {
-  border: none;
-  outline: none;
-}
-
 ul,
 li {
   list-style-type: none;
   padding-left: 0;
   margin: 0;
+}
+
+figure {
+  margin-bottom: 0;
 }
 
 section {
@@ -123,11 +123,61 @@ section {
   color: var(--color-text);
 }
 
+.normal-para {
+  font-weight: 400;
+  color: var(--color-text);
+  font-size: 1.4rem;
+}
+
 .btn {
   border: none;
   outline: none;
   display: inline;
-  width: inherit;
+  width: initial;
+  white-space: nowrap;
+  border: 1px solid transparent;
+  transition: var(--transition-base);
+}
+
+.primary-btn,
+.secondary-btn {
+  padding: 1.3rem 3rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-radius: var(--radius-16);
+}
+
+.primary-btn {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.primary-btn:hover {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+}
+
+.secondary-btn {
+  background-color: #fff;
+}
+
+.secondary-btn:hover {
+  background-color: #000;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.dashb-light-btn {
+  border-radius: 8px;
+  background-color: #0000001a;
+  font-size: 1.4rem;
+  padding: 8px 1rem;
+  transition: var(--transition-base);
+}
+
+.dashb-light-btn:hover {
+  background-color: #08080830;
 }
 
 .flex-center {
@@ -143,9 +193,114 @@ section {
   gap: 1rem;
 }
 
+/* Style all text-based inputs and textareas */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+textarea {
+  outline: none;
+  border: 1px solid transparent;
+  background-color: var(--color-light-gray);
+  padding: 1.3rem 1.7rem;
+  border-radius: var(--radius-16);
+  width: 100%;
+  transition: 0.3s linear;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: var(--color-light-gray) !important;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  min-width: 100px;
+  border: 1px solid transparent;
+  padding: 1.3rem 4rem 1.3rem 1.7rem;
+  border-radius: var(--radius-16);
+  width: 100%;
+  height: 100%;
+  transition: border-color 0.2s ease;
+}
+
+/* For dark backgrounds */
+select.dark-arrow {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='gray' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--color-primary);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(40, 167, 69, 0.2);
+}
+
+input::placeholder,
+select,
+textarea::placeholder {
+  color: var(--color-text) !important;
+  font-size: 1.4rem;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+}
+
+/* Change color of Bootstrap switch (checkbox) when checked */
+.form-check-input {
+  width: 4rem !important;
+  height: 2rem !important;
+}
+
+.form-check-input:checked {
+  background-color: #13ee3be5;
+  border-color: #13ee3be5;
+}
+
+/* Optional: remove the blue focus glow */
+.form-check-input:focus {
+  box-shadow: none;
+  border-color: #13ee3be5;
+}
+
+.ellipse-lg {
+  position: absolute;
+  width: 11rem;
+  height: 11rem;
+  background-color: #0000000f;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.ellipse-sm {
+  position: absolute;
+  width: 6rem;
+  height: 6rem;
+  background-color: #0000000f;
+  border-radius: 50%;
+  z-index: -1;
+}
+
 /* ///////////////////////// UTILITY CLASSES ///////////////////// */
 .clr-text {
   color: var(--color-text);
+}
+
+.clr-text-dark {
+  color: var(--color-text-dark);
+}
+
+.shadow-normal {
+  box-shadow: var(--drop-shadow);
 }
 
 /*//////////////// Animations /////////////////////*/
@@ -157,6 +312,14 @@ section {
 /* Show elements after animation */
 [data-animate].animated {
   opacity: 1;
+}
+
+.fast-animation {
+  --animate-duration: 0.5s;
+}
+
+.slow-animation {
+  --animate-duration: 2s;
 }
 
 .card-hover-effect:hover {
@@ -221,7 +384,7 @@ section {
   }
 
   .hero-heading {
-    font-size: 3.6rem;
+    font-size: 3.2rem;
   }
 
   .section-padding {
@@ -230,5 +393,9 @@ section {
 
   .section-heading {
     font-size: 2.2rem;
+  }
+
+  .primary-btn {
+    font-size: 15px;
   }
 }

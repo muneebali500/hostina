@@ -94,7 +94,6 @@
     <link rel="stylesheet" href="src/assets/styles/main/header.css" />
     <link rel="stylesheet" href="src/assets/styles/main/footer.css" />
     <link rel="stylesheet" href="src/assets/styles/main/common.css" />
-    <link rel="stylesheet" href="src/assets/styles/main/contact.css" />
   </head>
   <body>
     <header id="main-header" class="py-3 shadow-sm d-flex align-items-center">
@@ -295,17 +294,17 @@
       </div>
     </header>
 
-    <main id="contact-main">
+    <main id="blog-main">
       <!-- Hero Section -->
       <section id="hero-common" class="hero-common flex-center">
         <div class="container">
           <div class="content">
-            <h1 class="hero-heading" data-animate="fadeInDown">Contact us</h1>
+            <h1 class="hero-heading" data-animate="fadeInDown">Blog Details</h1>
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb flex-center" data-animate="fadeInUp">
                 <li class="breadcrumb-item"><a href="/">Home</a></li>
                 <li class="breadcrumb-item active" aria-current="page">
-                  Contact
+                  Blog Details
                 </li>
               </ol>
             </nav>
@@ -313,158 +312,334 @@
         </div>
       </section>
 
-      <!-- Contact Section -->
-      <section
-        id="contact-details-section"
-        class="contact-details-section section-padding"
-      >
+      <!-- BLOG SECTION STARTS -->
+      <section id="blog-section" class="py-5 bg-white">
         <div class="main-container">
-          <div class="row g-5">
-            <!-- Contact Information -->
-            <div class="col-md-5" data-animate="fadeInLeft">
-              <div class="contact-info">
-                <h4 class="section-subheading">Contact us</h4>
-                <h2 class="section-heading">Get in Touch</h2>
-
-                <!-- Address -->
-                <div class="contact-item d-flex align-items-start mb-4">
-                  <div class="contact-icon">
-                    <i class="fas fa-map-marker-alt"></i>
-                  </div>
-                  <div class="contact-details">
-                    <h5 class="contact-label">Address</h5>
-                    <p class="contact-text">8 Mostafa elnshaar, Cairo Egypt</p>
-                  </div>
-                </div>
-
-                <!-- Phone -->
-                <div class="contact-item d-flex align-items-start mb-4">
-                  <div class="contact-icon">
-                    <i class="fas fa-phone"></i>
-                  </div>
-                  <div class="contact-details">
-                    <h5 class="contact-label">Phone</h5>
-                    <p class="contact-text">+20 100 12 16 321</p>
-                  </div>
-                </div>
-
-                <!-- Email -->
-                <div class="contact-item d-flex align-items-start mb-4">
-                  <div class="contact-icon">
-                    <i class="fas fa-envelope"></i>
-                  </div>
-                  <div class="contact-details">
-                    <h5 class="contact-label">Email</h5>
-                    <p class="contact-text">Hostina@gmail.com</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Contact Form -->
-            <div class="col-md-7" data-animate="fadeInRight">
-              <div class="contact-form-container">
-                <h3 class="form-heading">Get a Free Quote</h3>
-
-                <form id="contact-form" class="contact-form">
-                  <div class="row g-3">
-                    <!-- Name and Email -->
-                    <div class="col-md-6 mb-2">
-                      <input
-                        type="text"
-                        name="name"
-                        class="form-control form-input"
-                        placeholder="Name*"
-                        required
-                      />
-                    </div>
-                    <div class="col-md-6">
-                      <input
-                        type="email"
-                        name="email"
-                        class="form-control form-input"
-                        placeholder="Email*"
-                        required
-                      />
-                    </div>
-
-                    <!-- Phone and Service -->
-                    <div class="col-md-6 mb-2">
-                      <input
-                        type="tel"
-                        name="phone"
-                        class="form-control form-input"
-                        placeholder="Phone*"
-                        required
-                      />
-                    </div>
-                    <div class="col-md-6 mb-2">
-                      <select
-                        name="service"
-                        class="form-control form-input"
-                        required
+          <div
+            class="d-flex flex-column flex-lg-row gap-4 gap-lg-5 align-items-start"
+          >
+            <!-- Main Blog Content -->
+            <div
+              class="blog-main flex-grow-1"
+              data-animate="fadeInUp"
+              data-animate-delay="100"
+            >
+              <article class="blog-post">
+                <figure class="blog-image position-relative overflow-hidden">
+                  <img
+                    src="/images/academy-card-pic.jpg"
+                    alt="Data Protection Blog Post"
+                    class="w-100 h-100 object-fit-cover rounded-4"
+                    loading="lazy"
+                  />
+                </figure>
+                <div class="py-4 py-md-5">
+                  <div
+                    class="blog-meta d-flex align-items-center gap-3 mb-4 fs-6 text-body-secondary"
+                  >
+                    <span class="bg-black text-white py-1 px-3 rounded-2"
+                      >Development</span
+                    >
+                    <span class="blog-date d-flex align-items-center gap-2">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
                       >
-                        <option value="">Select Service*</option>
-                        <option value="web-hosting">Web Hosting</option>
-                        <option value="domain-registration">
-                          Domain Registration
-                        </option>
-                        <option value="vps-hosting">VPS Hosting</option>
-                        <option value="cloud-hosting">Cloud Hosting</option>
-                        <option value="email-hosting">Email Hosting</option>
-                        <option value="ssl-certificates">
-                          SSL Certificates
-                        </option>
-                        <option value="technical-support">
-                          Technical Support
-                        </option>
-                        <option value="other">Other</option>
-                      </select>
-                    </div>
-
-                    <!-- Message -->
-                    <div class="col-12 mb-4">
-                      <textarea
-                        name="message"
-                        class="form-control form-textarea"
-                        rows="6"
-                        placeholder="Write a Message*"
-                        required
-                      ></textarea>
-                    </div>
-
-                    <!-- Submit Button -->
-                    <div class="col-12">
-                      <button type="submit" class="btn primary-btn">
-                        Send Now
-                      </button>
-                    </div>
+                        <rect
+                          x="3"
+                          y="4"
+                          width="18"
+                          height="18"
+                          rx="2"
+                          ry="2"
+                        ></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                      </svg>
+                      26 May 2023
+                    </span>
                   </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+                  <h2 class="blog-title fs-2 fw-bold mb-4">
+                    The Complete Web Developer Guideline 2023
+                  </h2>
+                  <p class="blog-excerpt fs-4 lh-base mb-4 text-body-secondary">
+                    There are many variations of passages of Lorem Ipsum
+                    available, but the majority have suffered alteration in some
+                    form, by injected humour, or randomised words which don't
+                    look even slightly believable. If you are going to use a
+                    passage of Lorem Ipsum. Class aptent taciti sociosqu ad
+                    litora torquent per conubia nostra, per inceptos himenaeos.
+                    Vestibulum sollicitudin varius mauris non dignissim. Sed
+                    quis iaculis est. Nulla quam neque, interdum vitae fermentum
+                    lacinia, interdum eu magna. Mauris non posuere tellus. Donec
+                    quis euismod tellus. Nam vel lacus eu nisl bibendum accumsan
+                    vitae vitae nibh. Nam nec eros id magna hendrerit sagittis.
+                    Nullam sed mi non odio feugiat volutpat sit amet nec elit.
+                    Maecenas id hendrerit ipsum. Sed eget auctor metus, ac
+                    dapibus dolor There are many variations of passages of Lorem
+                    Ipsum available, but the majority have suffered alteration
+                    in some form, by injected humour, or randomised words which
+                    don't look even slightly believable. If you are going to use
+                    a passage of Lorem Ipsum. Class aptent taciti sociosqu ad
+                    litora torquent per conubia nostra, per inceptos himenaeos.
+                    Vestibulum sollicitudin varius mauris non dignissim. Sed
+                    quis iaculis est. Nulla quam neque, interdum vitae fermentum
+                    lacinia, interdum eu magna. Mauris non posuere tellus. Donec
+                    quis euismod tellus. Nam vel lacus eu nisl bibendum accumsan
+                    vitae vitae nibh. Nam nec eros id magna hendrerit sagittis.
+                    Nullam sed mi non odio feugiat volutpat sit amet nec elit.
+                    Maecenas id hendrerit ipsum. Sed eget auctor metus, ac
+                    dapibus dolor There are many variations of passages of Lorem
+                    Ipsum available, but the majority have suffered alteration
+                    in some form, by injected humour, or randomised words which
+                    don't look even slightly believable. If you are going to use
+                    a passage of Lorem Ipsum. Class aptent taciti sociosqu ad
+                    litora torquent per conubia nostra, per inceptos himenaeos.
+                    Vestibulum sollicitudin varius mauris non dignissim. Sed
+                    quis iaculis est. Nulla quam neque, interdum vitae fermentum
+                    lacinia, interdum eu magna. Mauris non posuere tellus. Donec
+                    quis euismod tellus. Nam vel lacus eu nisl bibendum accumsan
+                    vitae vitae nibh. Nam nec eros id magna hendrerit sagittis.
+                    Nullam sed mi non odio feugiat volutpat sit amet nec elit.
+                    Maecenas id hendrerit ipsum. Sed eget auctor metus, ac
+                    dapibus
+                  </p>
 
-      <!-- Map Section -->
-      <section id="map-section" class="map-section section-padding">
-        <div class="map-container" data-animate="fadeIn">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3452.8657788088684!2d31.22182!3d30.06263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14584587ac8f291b%3A0x810c2f3fa2a52424!2sCairo%2C%20Egypt!5e0!3m2!1sen!2sus!4v1642567890123!5m2!1sen!2sus"
-            width="100%"
-            height="450"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Hostina Location Map"
-          ></iframe>
+                  <hr />
+
+                  <div
+                    class="d-md-flex justify-content-between align-items-center gap-4"
+                  >
+                    <ul class="blog-tags d-flex flex-wrap gap-3 mb-3 mb-md-0">
+                      <li
+                        class="blog-tag bg-light px-3 py-2 rounded-4 fs-5 text-body-secondary fw-bold"
+                      >
+                        Tags
+                      </li>
+                      <li
+                        class="blog-tag bg-light px-3 py-2 rounded-4 fs-5 text-body-secondary"
+                      >
+                        Marketing
+                      </li>
+                      <li
+                        class="blog-tag bg-light px-3 py-2 rounded-4 fs-5 text-body-secondary"
+                      >
+                        Development
+                      </li>
+                      <li
+                        class="blog-tag bg-light px-3 py-2 rounded-4 fs-5 text-body-secondary"
+                      >
+                        Design
+                      </li>
+                    </ul>
+
+                    <ul class="social-icons flex-center gap-3">
+                      <li>
+                        <a
+                          class="flex-center"
+                          href="https://www.facebook.com/YourPageName"
+                          target="_blank"
+                          aria-label="Visit our Facebook page"
+                        >
+                          <i class="fab fa-facebook-f"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="flex-center"
+                          href="https://www.youtube.com/YourChannelName"
+                          target="_blank"
+                          aria-label="Visit our YouTube channel"
+                        >
+                          <i class="fab fa-youtube"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="flex-center"
+                          href="https://www.instagram.com/YourUsername"
+                          target="_blank"
+                          aria-label="Visit our Instagram profile"
+                        >
+                          <i class="fab fa-instagram"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <hr />
+                </div>
+              </article>
+            </div>
+
+            <!-- Sidebar -->
+            <aside
+              class="blog-sidebar d-md-flex flex-lg-column col-lg-4 col-12"
+            >
+              <!-- Latest Posts -->
+              <div
+                class="sidebar-section bg-white flex-1 rounded-4 shadow-sm p-4 mb-5 border border-light col-md-6 col-lg-12"
+                data-animate="fadeInUp"
+                data-animate-delay="200"
+              >
+                <h3 class="sidebar-title fs-2 fw-bold mb-4 pb-3">
+                  Latest Post
+                </h3>
+
+                <ul class="latest-posts">
+                  <li
+                    class="latest-post-item d-flex align-items-center gap-4 mb-4 pb-4 border-bottom border-light"
+                  >
+                    <figure class="latest-post-image rounded-4 overflow-hidden">
+                      <img
+                        src="/images/academy-card-pic.jpg"
+                        alt="Web Developer"
+                        class="w-100 object-fit-cover"
+                        loading="lazy"
+                      />
+                    </figure>
+                    <div class="latest-post-content flex-grow-1">
+                      <div
+                        class="latest-post-date fs-6 text-body-secondary mb-2 d-flex align-items-center gap-2"
+                      >
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <circle cx="12" cy="12" r="10"></circle>
+                          <polyline points="12,6 12,12 16,14"></polyline>
+                        </svg>
+                        26 May 2023
+                      </div>
+                      <h4 class="latest-post-title fs-4 fw-semibold lh-sm">
+                        <a href="">The Complete Web Developer Guideline 2023</a>
+                      </h4>
+                    </div>
+                  </li>
+
+                  <li
+                    class="latest-post-item d-flex align-items-center gap-4 mb-4 pb-4 border-bottom border-light"
+                  >
+                    <figure class="latest-post-image rounded-4 overflow-hidden">
+                      <img
+                        src="/images/academy-card-pic.jpg"
+                        alt="Web Developer"
+                        class="w-100 object-fit-cover"
+                        loading="lazy"
+                      />
+                    </figure>
+                    <div class="latest-post-content flex-grow-1">
+                      <div
+                        class="latest-post-date fs-6 text-body-secondary mb-2 d-flex align-items-center gap-2"
+                      >
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <circle cx="12" cy="12" r="10"></circle>
+                          <polyline points="12,6 12,12 16,14"></polyline>
+                        </svg>
+                        24 May 2023
+                      </div>
+                      <h4 class="latest-post-title fs-4 fw-semibold lh-sm">
+                        <a href="">The Complete Web Developer Guideline 2023</a>
+                      </h4>
+                    </div>
+                  </li>
+
+                  <li class="latest-post-item d-flex align-items-center gap-4">
+                    <figure class="latest-post-image rounded-4 overflow-hidden">
+                      <img
+                        src="/images/academy-card-pic.jpg"
+                        alt="Web Developer"
+                        class="w-100 object-fit-cover"
+                        loading="lazy"
+                      />
+                    </figure>
+                    <div class="latest-post-content flex-grow-1">
+                      <div
+                        class="latest-post-date fs-6 text-body-secondary mb-2 d-flex align-items-center gap-2"
+                      >
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <circle cx="12" cy="12" r="10"></circle>
+                          <polyline points="12,6 12,12 16,14"></polyline>
+                        </svg>
+                        20 May 2023
+                      </div>
+                      <h4 class="latest-post-title fs-4 fw-semibold lh-sm">
+                        <a href="">The Complete Web Developer Guideline 2023</a>
+                      </h4>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Categories -->
+              <div
+                class="sidebar-section bg-white rounded-4 shadow-sm p-4 mb-5 border border-light col-md-6 col-lg-12 ms-md-4 ms-lg-0"
+                data-animate="fadeInUp"
+                data-animate-delay="300"
+              >
+                <h3 class="sidebar-title fs-2 fw-bold mb-4 pb-3">Categories</h3>
+                <ul class="categories-list list-unstyled">
+                  <li class="category-item mb-3">
+                    <a
+                      href="#"
+                      class="category-link d-block p-3 fs-4 fw-medium text-decoration-none"
+                      >Web Hosting</a
+                    >
+                  </li>
+                  <li class="category-item mb-3">
+                    <a
+                      href="#"
+                      class="category-link d-block p-3 fs-4 fw-medium text-decoration-none"
+                      >VPS Server</a
+                    >
+                  </li>
+                  <li class="category-item mb-3">
+                    <a
+                      href="#"
+                      class="category-link d-block p-3 fs-4 fw-medium text-decoration-none"
+                      >Dedicated Servers</a
+                    >
+                  </li>
+                  <li class="category-item">
+                    <a
+                      href="#"
+                      class="category-link d-block p-3 fs-4 fw-medium text-decoration-none"
+                      >Game Servers</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </aside>
+          </div>
         </div>
       </section>
     </main>
 
-    <!------------------------ Footer ------------------------>
+    <!------------------------- Footer --------------------->
+    <!-- ------------------------------------------------ -->
     <footer class="section-padding position-relative">
       <div class="main-container" data-animate="fadeInUp">
         <div class="content row g-4">
@@ -566,7 +741,6 @@
       </div>
     </footer>
 
-    <!-- Bootstrap JS -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

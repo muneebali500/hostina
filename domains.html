@@ -52,8 +52,7 @@
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.png" />
-    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logo.png" />
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
@@ -91,13 +90,211 @@
     />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="./src/assets/styles/main/globals.css" />
-    <link rel="stylesheet" href="./src/assets/styles/main/header.css" />
-    <link rel="stylesheet" href="./src/assets/styles/main/footer.css" />
-    <link rel="stylesheet" href="./src/assets/styles/main/common.css" />
-    <link rel="stylesheet" href="./src/assets/styles/main/domains.css" />
+    <link rel="stylesheet" href="src/assets/styles/main/globals.css" />
+    <link rel="stylesheet" href="src/assets/styles/main/header.css" />
+    <link rel="stylesheet" href="src/assets/styles/main/footer.css" />
+    <link rel="stylesheet" href="src/assets/styles/main/common.css" />
+    <link rel="stylesheet" href="src/assets/styles/main/domains.css" />
   </head>
   <body>
+    <header id="main-header" class="py-3 shadow-sm d-flex align-items-center">
+      <div class="main-container">
+        <nav class="navbar navbar-expand-lg p-0">
+          <a
+            class="navbar-brand d-flex align-items-center me-auto"
+            href="index.html"
+          >
+            <img
+              src="/images/logo.png"
+              alt="Hostina Logo"
+              class="me-2"
+              loading="lazy"
+            />
+            <h4 class="m-0 text-white">Hostina</h4>
+          </a>
+
+          <button
+            class="navbar-toggler ms-3"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <i class="bi bi-list"></i>
+          </button>
+
+          <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header p-4">
+              <img
+                src="/images/logo.png"
+                alt="Hostina Logo"
+                loading="lazy"
+                style="width: 35px"
+                class="me-2"
+              />
+              <h5 class="offcanvas-title fs-2" id="offcanvasNavbarLabel">
+                Hostina
+              </h5>
+              <button
+                type="button"
+                class="btn-close me-3"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul
+                class="navbar-nav justify-content-center align-items-lg-center flex-grow-1 pe-3"
+              >
+                <li class="nav-item px-3 dropdown">
+                  <a
+                    class="nav-link d-flex align-items-center justify-content-between gap-3"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                  >
+                    Domains <i class="fas fa-angle-down"></i>
+                  </a>
+                  <ul
+                    class="dropdown-menu p-3 fast-animation"
+                    data-animate="fadeInUp"
+                  >
+                    <li>
+                      <a class="dropdown-item" href="domains.html"
+                        >Domain Search</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Domain Transfer</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Domain Pricing</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item px-3 dropdown">
+                  <a
+                    class="nav-link d-flex align-items-center justify-content-between gap-3"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                  >
+                    Hosting <i class="fas fa-angle-down"></i>
+                  </a>
+                  <ul
+                    class="dropdown-menu p-3 fast-animation"
+                    data-animate="fadeInUp"
+                  >
+                    <li>
+                      <a class="dropdown-item" href="hosting-details.html"
+                        >Shared Hosting</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="vps-hosting.html"
+                        >VPS Hosting</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="dedicated-hosting.html"
+                        >Dedicated Servers</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="games-hosting.html"
+                        >Games Hosting</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item px-3 dropdown">
+                  <a
+                    class="nav-link d-flex align-items-center justify-content-between gap-3"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                  >
+                    Servers <i class="fas fa-angle-down"></i>
+                  </a>
+                  <ul
+                    class="dropdown-menu p-3 fast-animation"
+                    data-animate="fadeInUp"
+                  >
+                    <li>
+                      <a class="dropdown-item" href="servers.html">Servers</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">SSL Certificates</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Website Builder</a>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Email Hosting</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item px-3">
+                  <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+                <li class="nav-item px-3">
+                  <a class="nav-link" href="blogs.html">Blogs</a>
+                </li>
+              </ul>
+
+              <div
+                class="d-flex flex-column flex-lg-row align-items-lg-center gap-3 mt-3 mt-lg-0 p-3 p-lg-0"
+              >
+                <div class="dropdown">
+                  <select class="dark-arrow">
+                    <option value="USD">
+                      <i class="bi bi-flag-fill me-2"></i>USD
+                    </option>
+                    <option value="EGP">
+                      <i class="bi bi-flag-fill me-2"></i>EGP
+                    </option>
+                    <option value="EUR">
+                      <i class="bi bi-flag-fill me-2"></i>EUR
+                    </option>
+                  </select>
+                </div>
+
+                <a href="login.html" class="btn sign-up-btn"> Sign Up </a>
+
+                <div class="nav-item dropdown p-2 d-none">
+                  <a
+                    class="nav-link d-flex align-items-center justify-content-between gap-3"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                  >
+                    <span>
+                      <i class="fa-solid fa-user me-2"></i>
+                      Account
+                    </span>
+                    <i class="fas fa-angle-down"></i>
+                  </a>
+                  <ul
+                    class="dropdown-menu p-3 fast-animation w-100"
+                    data-animate="fadeInUp"
+                  >
+                    <li>
+                      <a class="dropdown-item" href="#">Profile</a>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
     <main id="domains-main">
       <!-- Hero Section -->
       <section id="hero-common" class="hero-common flex-center">
@@ -125,9 +322,9 @@
       <!-- Domain Search Section -->
       <section id="domain-search" class="domain-search section-padding">
         <div class="main-container">
-          <div class="content text-center">
+          <div class="content">
             <h2
-              class="section-heading text-left"
+              class="section-heading text-center"
               data-animate="fadeInUp"
               data-animate-delay="200"
             >
@@ -155,7 +352,7 @@
                   />
                   <i class="fas fa-keyboard text-black"></i>
                 </div>
-                <button type="submit" class="btn btn-dark search-btn">
+                <button type="submit" class="btn primary-btn">
                   <i class="fas fa-search"></i>
                   Check Domain
                 </button>
@@ -169,7 +366,7 @@
       <section id="popular-domains" class="popular-domains section-padding">
         <div class="main-container">
           <div class="content">
-            <h4 class="section-subheading text-center" data-animate="fadeIn">
+            <h4 class="section-subheading" data-animate="fadeIn">
               Search Domain
             </h4>
             <h2
@@ -191,9 +388,7 @@
                     <h3 class="domain-name">.online</h3>
                     <p class="domain-price">$12.00</p>
                   </div>
-                  <button class="btn btn-dark domain-select-btn">
-                    Get Offer
-                  </button>
+                  <button class="btn primary-btn w-100">Get Offer</button>
 
                   <div class="ellipse ellipse-1"></div>
                   <div class="ellipse ellipse-2"></div>
@@ -209,9 +404,7 @@
                     <h3 class="domain-name">.online</h3>
                     <p class="domain-price">$12.00</p>
                   </div>
-                  <button class="btn btn-dark domain-select-btn">
-                    Get Offer
-                  </button>
+                  <button class="btn primary-btn w-100">Get Offer</button>
 
                   <div class="ellipse ellipse-1"></div>
                   <div class="ellipse ellipse-2"></div>
@@ -227,9 +420,7 @@
                     <h3 class="domain-name">.online</h3>
                     <p class="domain-price">$12.00</p>
                   </div>
-                  <button class="btn btn-dark domain-select-btn">
-                    Get Offer
-                  </button>
+                  <button class="btn primary-btn w-100">Get Offer</button>
 
                   <div class="ellipse ellipse-1"></div>
                   <div class="ellipse ellipse-2"></div>
@@ -245,9 +436,7 @@
                     <h3 class="domain-name">.online</h3>
                     <p class="domain-price">$12.00</p>
                   </div>
-                  <button class="btn btn-dark domain-select-btn">
-                    Get Offer
-                  </button>
+                  <button class="btn primary-btn w-100">Get Offer</button>
 
                   <div class="ellipse ellipse-1"></div>
                   <div class="ellipse ellipse-2"></div>
@@ -263,9 +452,7 @@
                     <h3 class="domain-name">.online</h3>
                     <p class="domain-price">$12.00</p>
                   </div>
-                  <button class="btn btn-dark domain-select-btn">
-                    Get Offer
-                  </button>
+                  <button class="btn primary-btn w-100">Get Offer</button>
 
                   <div class="ellipse ellipse-1"></div>
                   <div class="ellipse ellipse-2"></div>
@@ -281,9 +468,7 @@
                     <h3 class="domain-name">.online</h3>
                     <p class="domain-price">$12.00</p>
                   </div>
-                  <button class="btn btn-dark domain-select-btn">
-                    Get Offer
-                  </button>
+                  <button class="btn primary-btn w-100">Get Offer</button>
 
                   <div class="ellipse ellipse-1"></div>
                   <div class="ellipse ellipse-2"></div>
@@ -299,9 +484,7 @@
                     <h3 class="domain-name">.online</h3>
                     <p class="domain-price">$12.00</p>
                   </div>
-                  <button class="btn btn-dark domain-select-btn">
-                    Get Offer
-                  </button>
+                  <button class="btn primary-btn w-100">Get Offer</button>
 
                   <div class="ellipse ellipse-1"></div>
                   <div class="ellipse ellipse-2"></div>
@@ -317,9 +500,7 @@
                     <h3 class="domain-name">.online</h3>
                     <p class="domain-price">$12.00</p>
                   </div>
-                  <button class="btn btn-dark domain-select-btn">
-                    Get Offer
-                  </button>
+                  <button class="btn primary-btn w-100">Get Offer</button>
 
                   <div class="ellipse ellipse-1"></div>
                   <div class="ellipse ellipse-2"></div>
@@ -415,7 +596,7 @@
                 id="testimonials-subheading"
                 data-animate="fadeIn"
               >
-                Faqs
+                Kudos
               </p>
               <h2
                 class="section-heading mb-0"
@@ -423,7 +604,7 @@
                 data-animate="fadeInUp"
                 data-animate-delay="200"
               >
-                Real Stories. Real Success.
+                Client's Review
               </h2>
             </div>
             <div class="nav-controls">
@@ -796,6 +977,108 @@
       <!-- FAQ SECTION ENDS -->
     </main>
 
+    <!------------------------ Footer ------------------------>
+    <footer class="section-padding position-relative">
+      <div class="main-container" data-animate="fadeInUp">
+        <div class="content row g-4">
+          <div class="col-lg-4 mt-0">
+            <div class="d-flex align-items-center gap-3 mb-4">
+              <img
+                src="/images/logo.png"
+                alt="Hostina Logo"
+                loading="lazy"
+                class=""
+                style="width: 10%"
+              />
+              <h4 class="m-0 text-white fs-3">Hostina</h4>
+            </div>
+            <p class="fs-4 clr-text-dark" style="max-width: 70%">
+              Empowering your online presence with reliable hosting, expert
+              support, and honest pricing. Join thousands who trust us to keep
+              their websites secure, fast, and always online.
+            </p>
+          </div>
+          <div class="col-lg-8 row g-4 g-lg-0">
+            <div class="col-lg-3 col-6">
+              <h4 class="nav-title">Services</h4>
+              <ul>
+                <li><a href="#">Register Domain</a></li>
+                <li><a href="">Transfer Domain</a></li>
+                <li><a href="">Domain Search</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-6">
+              <h4 class="nav-title">Hosting</h4>
+              <ul>
+                <li><a href="">Shared Hosting</a></li>
+                <li><a href="">WordPress Hosting</a></li>
+                <li><a href="">Reseller Hosting</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-6">
+              <h4 class="nav-title">Services</h4>
+              <ul>
+                <li><a href="">Virtual Private Servers</a></li>
+                <li><a href="">Dedicated Servers</a></li>
+                <li><a href="">Game Servers</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-6">
+              <h4 class="nav-title">Contact Us</h4>
+              <ul>
+                <li>
+                  <a
+                    href="mailto:contact@company.com"
+                    class="d-flex gap-2 align-items-center"
+                    ><i class="fa-solid fa-envelope"></i> contact@company.com</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="tel:(414) 687 - 5892"
+                    class="d-flex gap-2 align-items-center"
+                    ><i class="fa-solid fa-phone"></i> (414) 687 - 5892</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="d-flex gap-2 align-items-center"
+                    ><i class="fa-solid fa-location-dot"></i> 794 Mcallister</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <ul class="social-links d-flex align-items-center gap-3">
+          <li class="social-item">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          </li>
+          <li class="social-item">
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          </li>
+          <li class="social-item">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          </li>
+        </ul>
+
+        <div class="copyright-text border-top col-lg-6 mx-auto">
+          <p class="fw-bold pt-4 text-center mb-0 clr-text-dark">
+            2025 Hostina. All Copyrights reserved.
+          </p>
+        </div>
+      </div>
+
+      <figure class="position-absolute start-0 bottom-0" style="width: 15%">
+        <img src="/images/vector-334.png" alt="Vector" loading="lazy" />
+      </figure>
+
+      <div class="dots">
+        <div></div>
+        <div></div>
+      </div>
+    </footer>
+
     <!-- Bootstrap JS -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -807,6 +1090,6 @@
       integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK"
       crossorigin="anonymous"
     ></script>
-    <script src="./src/js/main/app.js" type="module"></script>
+    <script src="src/assets/js/main/app.js" type="module"></script>
   </body>
 </html>

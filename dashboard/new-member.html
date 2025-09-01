@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hostina - Premium Web Hosting Solutions</title>
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Hostina - Premium Web Hosting Solutions" />
+    <meta
+      name="description"
+      content="Hostina offers reliable, high-performance web hosting services with 99.9% uptime, 24/7 support, and easy-to-use control panel."
+    />
+    <meta
+      name="keywords"
+      content="web hosting, WordPress hosting, VPS, cloud hosting, domain registration"
+    />
+    <meta name="author" content="Hostina" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hostina.com/" />
+    <meta
+      property="og:title"
+      content="Hostina - Premium Web Hosting Solutions"
+    />
+    <meta
+      property="og:description"
+      content="Reliable, high-performance web hosting services with 99.9% uptime and 24/7 support."
+    />
+    <meta
+      property="og:image"
+      content="https://hostina.com/images/social-preview.jpg"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://hostina.com/" />
+    <meta
+      property="twitter:title"
+      content="Hostina - Premium Web Hosting Solutions"
+    />
+    <meta
+      property="twitter:description"
+      content="Reliable, high-performance web hosting services with 99.9% uptime and 24/7 support."
+    />
+    <meta
+      property="twitter:image"
+      content="https://hostina.com/images/social-preview.jpg"
+    />
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+
+    <!-- Animation -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/src/assets/styles/main/globals.css" />
+    <link rel="stylesheet" href="/src/assets/styles/main/common.css" />
+    <link rel="stylesheet" href="/src/assets/styles/dashboard/dashb.css" />
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <button class="sidebar-close">
+        <i class="fas fa-times"></i>
+      </button>
+      <header class="sidebar-header p-4 d-flex align-items-center">
+        <a href="/" class="d-flex align-items-center gap-2 mb-5">
+          <figure style="width: 30px">
+            <img src="/images/logo.png" alt="Company Logo" loading="lazy" />
+          </figure>
+          <span class="fs-3"> Hestonia </span>
+        </a>
+      </header>
+      <ul class="nav flex-column sidebar-nav">
+        <li class="nav-item has-submenu d-block d-lg-none">
+          <a
+            class="nav-link d-flex align-items-center justify-content-between"
+            href="#"
+            data-submenu="user"
+          >
+            <span><i class="fas fa-user-circle"></i> User</span>
+            <i class="fas fa-chevron-down submenu-arrow"></i>
+          </a>
+          <ul class="submenu">
+            <li class="nav-item">
+              <a
+                class="nav-link d-flex align-items-center"
+                href="/dashboard/store/products.html"
+              >
+                <i class="fas fa-user"></i>
+                Profile
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link d-flex align-items-center"
+                href="/dashboard/store/orders.html"
+              >
+                <i class="fas fa-cog"></i>
+                Settings
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link d-flex align-items-center active"
+            href="/dashboard/main.html"
+          >
+            <i class="fas fa-chart-bar"></i>
+            Dashboard
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link d-flex align-items-center"
+            href="/dashboard/products.html"
+          >
+            <i class="fas fa-cogs"></i>
+            Services
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link d-flex align-items-center"
+            href="/dashboard/domains.html"
+          >
+            <i class="fas fa-globe"></i>
+            Domains
+          </a>
+        </li>
+        <li class="nav-item has-submenu">
+          <a
+            class="nav-link d-flex align-items-center justify-content-between"
+            href="/dashboard/cart.html"
+            data-submenu="billing"
+          >
+            <span><i class="fas fa-credit-card"></i> Billing</span>
+            <i class="fas fa-chevron-down submenu-arrow"></i>
+          </a>
+          <ul class="submenu">
+            <li class="nav-item">
+              <a
+                class="nav-link d-flex align-items-center"
+                href="/dashboard/store/products.html"
+              >
+                <i class="fas fa-box"></i>
+                Products
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link d-flex align-items-center"
+                href="/dashboard/store/orders.html"
+              >
+                <i class="fas fa-shopping-cart"></i>
+                Orders
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item has-submenu">
+          <a
+            class="nav-link d-flex align-items-center justify-content-between"
+            href="/dashboard/contact.html"
+            data-submenu="support"
+          >
+            <span><i class="fas fa-phone"></i> Support </span>
+            <i class="fas fa-chevron-down submenu-arrow"></i>
+          </a>
+          <ul class="submenu">
+            <li class="nav-item">
+              <a
+                class="nav-link d-flex align-items-center"
+                href="/dashboard/store/inventory.html"
+              >
+                <i class="fas fa-warehouse"></i>
+                Inventory
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link d-flex align-items-center"
+                href="/dashboard/store/analytics.html"
+              >
+                <i class="fas fa-chart-line"></i>
+                Analytics
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item has-submenu">
+          <a
+            class="nav-link d-flex align-items-center justify-content-between"
+            href="#"
+            data-submenu="store"
+          >
+            <span><i class="fas fa-link"></i> Store</span>
+            <i class="fas fa-chevron-down submenu-arrow"></i>
+          </a>
+          <ul class="submenu">
+            <li class="nav-item">
+              <a
+                class="nav-link d-flex align-items-center"
+                href="/dashboard/store/products.html"
+              >
+                <i class="fas fa-box"></i>
+                Products
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link d-flex align-items-center"
+                href="/dashboard/store/orders.html"
+              >
+                <i class="fas fa-shopping-cart"></i>
+                Orders
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link d-flex align-items-center"
+                href="/dashboard/store/inventory.html"
+              >
+                <i class="fas fa-warehouse"></i>
+                Inventory
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link d-flex align-items-center"
+                href="/dashboard/store/analytics.html"
+              >
+                <i class="fas fa-chart-line"></i>
+                Analytics
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <button class="logout-btn">
+        Logout
+        <i class="fas fa-sign-out-alt ms-2"></i>
+      </button>
+    </nav>
+
+    <main id="dashb-main">
+      <header id="dashb-header">
+        <div class="content px-4 px-md-5 py-4">
+          <div class="row">
+            <div
+              class="left-side col-6 col-lg-4 d-flex align-items-start align-items-md-center gap-3"
+            >
+              <div>
+                <h2 class="mb-1 fs-2 fw-bold">Add New Member</h2>
+              </div>
+            </div>
+            <div
+              class="user-wrap d-flex justify-content-end align-items-start align-items-md-center gap-3 col-6 col-lg-8"
+            >
+              <div class="cart-icon">
+                <i class="fa-solid fa-cart-shopping fs-3"></i>
+                <span class="notification-icon"></span>
+              </div>
+              <div class="bell-icon">
+                <i class="fa-solid fa-bell fs-3"></i>
+                <span class="notification-icon"></span>
+              </div>
+              <figure class="user-pic">
+                <img
+                  class="cover"
+                  src="/images/user-pic.png"
+                  alt="User Pic"
+                  loading="lazy"
+                />
+              </figure>
+              <button
+                class="btn btn-outline-dark d-md-none me-3 mobile-toggle"
+                style="display: none"
+              >
+                <i class="fas fa-bars"></i>
+              </button>
+              <div class="d-none d-lg-block">
+                <h3 class="user-name mb-0">Saif Hossam</h3>
+                <p class="user-occupation mb-0 fs-4 clr-text">Accountant</p>
+              </div>
+
+              <div class="dropdown ms-3 d-none d-lg-block">
+                <i
+                  class="fas fa-angle-down"
+                  id="dropdownMenuButton1"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  style="cursor: pointer; font-size: 16px"
+                ></i>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item fs-4" href="#">Profile</a></li>
+                  <li><a class="dropdown-item fs-4" href="#">Settings</a></li>
+                  <li><a class="dropdown-item fs-4" href="#">Logout</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Progress Steps section Starts -->
+      <div id="progress-steps" class="px-5" data-animate="fadeInLeft">
+        <!-- Progress Steps -->
+        <div class="mb-5">
+          <div
+            class="d-flex justify-content-between align-items-center position-relative"
+            id="progress-container"
+            style="width: 60rem; max-width: 100%"
+          >
+            <div class="progress-line-container">
+              <div id="progress-line" class="progress-line"></div>
+            </div>
+
+            <div class="flex-1 progress-step" data-step="1">
+              <div class="progress-step-number">1</div>
+              <span class="progress-step-text">Membership Management</span>
+            </div>
+            <div class="flex-1 progress-step" data-step="2">
+              <div class="progress-step-number">2</div>
+              <span class="progress-step-text">User Data</span>
+            </div>
+            <div class="flex-1 progress-step" data-step="3">
+              <div class="progress-step-number">3</div>
+              <span class="progress-step-text">User Area</span>
+            </div>
+            <div class="flex-1 progress-step" data-step="4">
+              <div class="progress-step-number">4</div>
+              <span class="progress-step-text">Main Gate</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FORM SECTION STARTS -->
+      <section
+        class="px-4 px-md-5 py-5"
+        data-animate="fadeInLeft"
+        data-animate-delay="150"
+      >
+        <div class="content">
+          <h2 class="fs-3 fw-bold mb-3">Choose a membership</h2>
+          <div class="rounded-4 p-4 shadow-normal">
+            <div class="row g-4">
+              <div class="col-md-4">
+                <select aria-label="Default select example">
+                  <option selected>Add Membership</option>
+                  <option value="1">Member One</option>
+                  <option value="2">Member Two</option>
+                  <option value="3">Member Three</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <div class="input-group">
+                  <input type="text" placeholder="First Name *" required />
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="input-group">
+                  <input type="text" placeholder="Last Name *" required />
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="input-group">
+                  <input type="email" placeholder="Email *" required />
+                </div>
+              </div>
+              <div class="col-md-4 d-flex">
+                <select
+                  aria-label="Default select example"
+                  class="w-25"
+                  style="
+                    background-color: #00000012 !important;
+                    border-radius: 16px 0 0 16px;
+                  "
+                >
+                  <option selected>🇪🇬 +20</option>
+                  <option value="1">🇹🇷 +90</option>
+                  <option value="2">🇵🇰 +92</option>
+                  <option value="3">🇱🇰 +94</option>
+                </select>
+
+                <div class="input-group">
+                  <input
+                    type="tel"
+                    placeholder="Mobile Number *"
+                    required
+                    class="w-100"
+                    style="border-radius: 0 16px 16px 0"
+                  />
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="input-group">
+                  <input
+                    type="text"
+                    placeholder="Name of the site or entity *"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="input-group">
+                  <input type="text" placeholder="Title 1 *" required />
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="input-group">
+                  <input type="text" placeholder="Title 2 *" required />
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="input-group">
+                  <input type="text" placeholder="The city *" required />
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="input-group">
+                  <input
+                    type="text"
+                    placeholder="Name of the site or entity *"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="input-group h-100">
+                  <select
+                    aria-label="Default select example"
+                    style="background-color: #00000012 !important"
+                  >
+                    <option selected>The State</option>
+                    <option value="1">Texas</option>
+                    <option value="2">California</option>
+                    <option value="3">Florida</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="input-group">
+                  <input type="text" placeholder="Zip Code *" required />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- FORM SECTION ENDS -->
+
+      <section
+        id="email-options"
+        class="px-4 px-md-5 py-4"
+        data-animate="fadeInLeft"
+        data-animate-delay="300"
+      >
+        <div class="content">
+          <h2 class="fs-3 fw-bold mb-3">Email Options</h2>
+          <div
+            class="p-4 shadow-normal position-relative overflow-hidden rounded-4"
+          >
+            <div class="input-group flex-nowrap gap-3 my-4">
+              <input type="checkbox" checked />
+              <span class="clr-text"
+                >Main mail - receives announcements and password reminders
+              </span>
+            </div>
+            <div class="input-group flex-nowrap gap-3 my-4">
+              <input type="checkbox" checked />
+              <span class="clr-text"
+                >Customer Service Mail - Receives invoices and reminders of due
+                invoices
+              </span>
+            </div>
+            <div class="input-group flex-nowrap gap-3 my-4">
+              <input type="checkbox" checked />
+              <span class="clr-text"
+                >Support Emails - Get a copy of all support ticket
+                communications created by the primary account holder
+              </span>
+            </div>
+            <div class="input-group flex-nowrap gap-3 my-4">
+              <input type="checkbox" checked />
+              <span class="clr-text"
+                >Product Mail - Receives order details, licensing information
+              </span>
+            </div>
+            <div class="input-group flex-nowrap gap-3 my-4">
+              <input type="checkbox" checked />
+              <span class="clr-text"
+                >Domain Mail - Receives renewal invoices, domain reservation
+                approvals, etc.
+              </span>
+            </div>
+
+            <div class="ellipse-lg" style="top: 20%; right: -1rem"></div>
+            <div class="ellipse-sm" style="top: 55%; right: -2rem"></div>
+          </div>
+
+          <div class="d-flex justify-content-end align-items-center gap-3 mt-5">
+            <button class="btn secondary-btn border">Cancel</button>
+            <button class="btn primary-btn">Save Changes</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js"
+      integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/src/assets/js/dashboard/dashb.js" type="module"></script>
+    <script src="/src/assets/js/dashboard/new-member.js" type="module"></script>
+  </body>
+</html>

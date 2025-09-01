@@ -1,0 +1,114 @@
+#choose-domain input {
+  background-color: #ebebebb2;
+  padding: 1.8rem 5rem 1.8rem 1.8rem;
+}
+
+#choose-domain select {
+  background-color: #ebebebb2;
+  color: var(--color-text);
+  padding: 1.8rem;
+}
+
+#choose-domain .input-icon {
+  margin-right: 2rem;
+}
+
+/* ///////////////// ORDER SUMMARY CARD IN CART //////////////// */
+.order-sum-wrap {
+  box-shadow: var(--shadow-sm);
+  border-radius: var(--radius-16);
+  overflow: hidden;
+}
+
+.order-sum-wrap h4 {
+  background-color: var(--color-light-gray);
+}
+
+.order-sum-wrap li {
+  color: var(--color-text);
+}
+
+.order-sum-wrap li:not(:last-child) {
+  border-bottom: 1px solid #eaeaea;
+}
+
+.order-sum-wrap li strong {
+  color: var(--color-primary);
+}
+
+/* //////////////// CART CONFIGURE /////////////// */
+
+#cart-configure .premium-wrap,
+#cart-configure .addon-content {
+  box-shadow: var(--shadow-sm);
+  border-radius: var(--radius-16);
+}
+
+/* //////////////// CART CHECKOUT /////////////// */
+/* Checkout Section */
+.checkout-card,
+.billing-card,
+.payment-card {
+  border-radius: var(--radius-18);
+  box-shadow: var(--drop-shadow);
+}
+
+.checkout-card .product-item {
+  padding: 1.2rem 2rem;
+}
+
+.checkout-card .product-item:not(:last-child),
+.payment-card ul li:not(:last-child) {
+  border-bottom: 1px solid #eaeaea;
+}
+
+.checkout-card .product-item h4 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.checkout-card .product-item p {
+  font-size: 1.4rem;
+  color: var(--color-text);
+  margin-bottom: 0;
+}
+
+.checkout-card .product-item select {
+  padding: 8px 12px;
+  border-radius: 11px;
+  font-size: 1.4rem;
+}
+
+.checkout-card .product-item .action-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.8rem;
+  color: var(--color-text);
+  transition: color 0.2s;
+}
+
+.checkout-card .product-item .action-btn:hover {
+  color: #000;
+}
+
+/* Billing Section */
+.billing-section form {
+  border-bottom: 1px solid #eaeaea;
+}
+
+.payment-card .icon {
+  font-size: 3rem;
+}
+
+/* //////////////////// MEDIA QUESRIES ///////////////// */
+/* ///////////////////////////////////////////////////// */
+@media (min-width: 1600px) {
+}
+
+@media (max-width: 767px) {
+  #choose-domain :is(.btn, select) {
+    width: 100%;
+  }
+}

@@ -1,6 +1,6 @@
-/*/////////////////////// HEADER STYLE ////////////////////////*/
+/*/////////////////////// #main-HEADER STYLE ////////////////////////*/
 
-header {
+#main-header {
   min-height: 8rem;
   position: sticky;
   top: 0;
@@ -8,67 +8,150 @@ header {
   background-color: var(--color-primary);
 }
 
-header .navbar-brand h4 {
+#main-header .navbar-brand h4 {
   font-size: 2rem;
 }
 
-.nav-item a {
-  color: var(--color-text);
+#main-header .nav-item a,
+#main-header .nav-link {
+  color: var(--color-text-dark);
   font-size: 1.5rem;
   transition: 0.3s linear;
 }
 
-.nav-item > a:hover {
-  color: #fff;
-}
-
-.nav-item.dropdown:hover .dropdown-menu {
-  display: block;
-}
-
-.nav-link,
-.nav-link:focus {
-  color: var(--color-text);
-}
-
-.navbar-nav .nav-link.active,
-.navbar-nav .nav-link.show {
+#main-header .nav-item a:hover,
+#main-header .nav-link:hover,
+#main-header .navbar-nav .nav-link.active,
+#main-header .navbar-nav .nav-link.show {
   color: #fff !important;
 }
 
-.language-selector {
-  border: 1px solid rgba(255, 255, 255, 0.4) !important;
-  background: transparent !important;
-  padding: 0.5rem;
+#main-header .nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background-color: rgba(20, 20, 20, 1);
+  padding: 1rem;
   border-radius: 10px;
-  color: var(--color-text);
 }
-.navbar-toggler {
+
+#main-header .dropdown-item {
+  padding: 0.7rem 1rem;
+  color: var(--color-text-dark);
+}
+
+#main-header .dropdown-item:hover {
+  color: #fff;
+  transform: translateX(3px);
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+}
+
+#main-header select {
+  background-color: var(--color-primary) !important;
+  border-radius: 16px;
+  border: 1px solid #dddddda3;
+  padding: 1rem;
+  color: var(--color-text-dark) !important;
+}
+
+#main-header .navbar-toggler {
   border: none;
   padding: 0.25rem 0.5rem;
-}
-.navbar-toggler:focus {
   box-shadow: none;
+  color: white !important;
 }
 
-.dropdown-toggle::after {
-  display: none;
-}
-
-span.dropdown-toggle {
-  color: var(--color-text) !important;
-  cursor: pointer;
-}
-
-.navbar-collapse.collapse.show {
-  padding-top: 2rem;
-}
-
-/* Add this to your CSS */
-.navbar-toggler {
-  color: white !important; /* Makes the icon white */
-}
-
-.navbar-toggler i.bi-list {
+#main-header .navbar-toggler i.bi-list {
   font-size: 4rem;
+}
+
+#main-header .sign-up-btn {
+  color: #fff;
+  padding: 0.8rem 3rem;
+  border: 1px solid var(--color-text-dark);
+  background-color: #fff;
+  border-radius: var(--radius-16);
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 17px;
+}
+
+#main-header .sign-up-btn:hover {
+  background-color: transparent;
+  color: var(--color-text-dark);
+}
+
+/* Off-canvas menu styling */
+.offcanvas {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.offcanvas-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.offcanvas-header .offcanvas-title {
+  color: #fff;
+  font-size: 2.5rem;
+}
+
+.offcanvas-body .nav-item a {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.offcanvas-body .nav-item a:hover {
+  color: var(--color-text-dark);
+}
+
+/* Adjust dropdown menu styling within the offcanvas */
+.offcanvas .dropdown-menu {
+  background-color: rgba(20, 20, 20, 0.96) !important;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.offcanvas .dropdown-item {
+  color: var(--color-text-dark);
+}
+
+.offcanvas .dropdown-item:hover {
+  color: #fff;
+}
+
+/* Customizing the close button */
+.offcanvas .btn-close {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") !important;
+  opacity: 1;
+}
+
+/* Responsive Logic */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    display: none !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .offcanvas {
+    visibility: visible !important;
+    background-color: transparent !important;
+    border: none !important;
+    transform: none !important;
+    width: auto !important;
+    position: static;
+  }
+  .offcanvas-header,
+  .offcanvas .btn-close {
+    display: none;
+  }
+  .offcanvas-body {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    flex-grow: 1;
+  }
+  .offcanvas-body .navbar-nav {
+    flex-direction: row;
+  }
 }

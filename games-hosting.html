@@ -94,7 +94,9 @@
     <link rel="stylesheet" href="src/assets/styles/main/header.css" />
     <link rel="stylesheet" href="src/assets/styles/main/footer.css" />
     <link rel="stylesheet" href="src/assets/styles/main/common.css" />
+    <link rel="stylesheet" href="src/assets/styles/main/games-hosting.css" />
   </head>
+
   <body>
     <header id="main-header" class="py-3 shadow-sm d-flex align-items-center">
       <div class="main-container">
@@ -294,22 +296,19 @@
       </div>
     </header>
 
-    <main id="hosting-details-main">
+    <main id="games-hosting-main">
+      <!-- Hero Section -->
       <section id="hero-common" class="hero-common flex-center">
         <div class="container">
           <div class="content">
-            <h1 class="hero-heading animate__animated animate__fadeInDown">
-              Hosting Details
+            <h1 class="hero-heading" data-animate="fadeInDown">
+              Games Hosting
             </h1>
-            <nav
-              aria-label="breadcrumb"
-              data-animate="fadeInUp"
-              data-animate-delay="200"
-            >
-              <ol class="breadcrumb flex-center">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb flex-center" data-animate="fadeInUp">
                 <li class="breadcrumb-item"><a href="/">Home</a></li>
                 <li class="breadcrumb-item active" aria-current="page">
-                  Web Hosting
+                  Games Details
                 </li>
               </ol>
             </nav>
@@ -317,210 +316,147 @@
         </div>
       </section>
 
-      <!-- PRICING SECTION STARTS -->
-      <section id="pricing-home" class="pricing-home section-padding bg-white">
+      <!-- BEST PLAN SECTION STARTS -->
+      <section id="best-plan-section" class="best-plan-section section-padding">
         <div class="main-container">
           <div class="content">
-            <!-- Animated Headings -->
-            <div class="section-subheading" data-animate="fadeIn">
+            <h4
+              class="section-subheading"
+              data-animate="fadeInUp"
+              data-animate-delay="100"
+            >
               Our Price
-            </div>
+            </h4>
             <h2
               class="section-heading"
               data-animate="fadeInUp"
-              data-animate-delay="100"
+              data-animate-delay="200"
             >
               Choose a Best Plan for You
             </h2>
 
-            <!-- Toggle buttons with animation -->
+            <!-- Toggle Switch -->
             <div
-              class="row mb-5"
-              data-animate="fadeIn"
+              class="d-flex justify-content-center mb-5"
+              data-animate="fadeInUp"
               data-animate-delay="200"
             >
-              <div class="col-12">
-                <div class="pricing-toggle d-flex justify-content-center">
-                  <div class="toggle-buttons">
-                    <button class="toggle-btn active" data-period="monthly">
-                      Monthly
-                    </button>
-                    <button
-                      class="toggle-btn fw-semibold"
-                      data-period="annually"
-                    >
-                      Annually
-                    </button>
-                  </div>
-                </div>
+              <div class="toggle-switch">
+                <button class="toggle-option active" data-billing="monthly">
+                  Monthly
+                </button>
+                <button class="toggle-option" data-billing="yearly">
+                  Yearly
+                </button>
               </div>
             </div>
 
-            <!-- Pricing cards with staggered animations -->
-            <ul class="row g-4">
-              <!-- Web Hosting -->
-              <li class="col-xl-3 col-md-6" data-animate="fadeInLeft">
-                <div class="pricing-card bg-white position-relative h-100">
-                  <div class="plan-name">Web Hosting</div>
-                  <div class="price-container">
-                    <div class="plan-price">$2.99</div>
-                    <div class="plan-period">Per month</div>
-                  </div>
-                  <div class="plan-description">
-                    Ideal for personal sites, small businesses.
-                  </div>
-
-                  <ul class="plan-features">
-                    <li>
-                      <div class="feature-icon check">✓</div>
-                      1 Host Unlimited Accounts
-                    </li>
-                    <li>
-                      <div class="feature-icon check">✓</div>
-                      50 GB SSD Storage
-                    </li>
-                    <li>
-                      <div class="feature-icon cross">✕</div>
-                      White-Label Control Panel
-                    </li>
-                    <li>
-                      <div class="feature-icon cross">✕</div>
-                      Free SSL for All Accounts
-                    </li>
-                  </ul>
-
-                  <button class="explore-btn">Explore Plans</button>
-                </div>
-              </li>
-
-              <!-- WordPress Hosting (Featured) -->
-              <li
-                class="col-xl-3 col-md-6"
-                data-animate="fadeInUp"
-                data-animate-delay="100"
+            <!-- Monthly Price Box -->
+            <div
+              class="price-box shadow-normal"
+              id="monthlyPriceBox"
+              data-animate="zoomIn"
+              data-animate-delay="300"
+            >
+              <div
+                class="row align-items-center justify-content-center text-center mb-4"
               >
-                <div
-                  class="pricing-card position-relative h-100 featured text-white"
-                >
-                  <div
-                    class="best-choice text-white fw-semibold position-absolute"
-                  >
-                    Best choice
-                  </div>
-                  <div class="plan-name">WordPress Hosting</div>
-                  <div class="price-container">
-                    <div class="plan-price m-0">$4.99</div>
-                    <div class="plan-period">Per month</div>
-                  </div>
-                  <div class="plan-description">
-                    Optimized for WordPress speed & security
-                  </div>
-
-                  <ul class="plan-features">
-                    <li>
-                      <div class="feature-icon check">✓</div>
-                      Host 1 WordPress Site
-                    </li>
-                    <li>
-                      <div class="feature-icon check">✓</div>
-                      20 GB SSD Storage
-                    </li>
-                    <li>
-                      <div class="feature-icon check">✓</div>
-                      Automatic WordPress Updates
-                    </li>
-                    <li>
-                      <div class="feature-icon check">✓</div>
-                      Free SSL Certificate
-                    </li>
-                  </ul>
-
-                  <button class="explore-btn">Explore Plans</button>
+                <div class="col-3">
+                  <h2 class="fw-bold mb-1" id="monthlySetupPrice">$100</h2>
+                  <small class="clr-text">One Time Setup Fee</small>
                 </div>
-              </li>
+                <span class="col-1 plus-sign">+</span>
+                <div class="col-3">
+                  <h2 class="h1 fw-bold mb-1" id="monthlyBasePrice">
+                    $70 <small class="clr-text fs-3">/mo</small>
+                  </h2>
+                  <small class="clr-text">Base Price</small>
+                </div>
+                <span class="col-1 plus-sign">+</span>
+                <div class="col-3">
+                  <h2 class="h1 fw-bold mb-1" id="monthlyAdditionalPrice">
+                    $10 <small class="clr-text fs-3">/mo</small>
+                  </h2>
+                  <small class="clr-text">Per Additional Feature</small>
+                </div>
+              </div>
 
-              <!-- Reseller Hosting -->
-              <li
-                class="col-xl-3 col-md-6"
-                data-animate="fadeInUp"
-                data-animate-delay="300"
+              <!-- Price Slider -->
+              <div class="row justify-content-center price-slider">
+                <div class="col-10 position-relative">
+                  <input
+                    type="range"
+                    class="price-range"
+                    id="monthlyPriceSlider"
+                    min="100"
+                    max="180"
+                    value="102"
+                  />
+                  <div class="price-tooltip" id="monthlyPriceTooltip">
+                    <span>Total Monthly Price</span>
+                    <span class="fw-bold" id="monthlyTooltipPrice">$102</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Choose Plan Button -->
+              <div class="text-center">
+                <button class="btn primary-btn">Choose Monthly Plan</button>
+              </div>
+            </div>
+
+            <!-- Yearly Price Box -->
+            <div class="price-box shadow-normal d-none" id="yearlyPriceBox">
+              <div
+                class="row align-items-center justify-content-center text-center mb-4"
               >
-                <div class="pricing-card bg-white position-relative h-100">
-                  <div class="plan-name">Reseller Hosting</div>
-                  <div class="price-container">
-                    <div class="plan-price">$9.99</div>
-                    <div class="plan-period">Per month</div>
-                  </div>
-                  <div class="plan-description">
-                    Build your own hosting business
-                  </div>
-
-                  <ul class="plan-features">
-                    <li>
-                      <div class="feature-icon check">✓</div>
-                      Host Unlimited Accounts
-                    </li>
-                    <li>
-                      <div class="feature-icon check">✓</div>
-                      50 GB SSD Storage
-                    </li>
-                    <li>
-                      <div class="feature-icon cross">✕</div>
-                      White-Label Control Panel
-                    </li>
-                    <li>
-                      <div class="feature-icon cross">✕</div>
-                      Free SSL for All Accounts
-                    </li>
-                  </ul>
-
-                  <button class="explore-btn">Explore Plans</button>
+                <div class="col-3">
+                  <h2 class="fw-bold mb-1" id="yearlySetupPrice">$100</h2>
+                  <small class="clr-text">One Time Setup Fee</small>
                 </div>
-              </li>
-
-              <!-- Premier Hosting -->
-              <li
-                class="col-xl-3 col-md-6"
-                data-animate="fadeInRight"
-                data-animate-delay="400"
-              >
-                <div class="pricing-card bg-white position-relative h-100">
-                  <div class="plan-name">Premier Hosting</div>
-                  <div class="price-container">
-                    <div class="plan-price">$9.99</div>
-                    <div class="plan-period">Per month</div>
-                  </div>
-                  <div class="plan-description">
-                    Build your own hosting business
-                  </div>
-
-                  <ul class="plan-features">
-                    <li>
-                      <div class="feature-icon check">✓</div>
-                      1 Host Unlimited Accounts
-                    </li>
-                    <li>
-                      <div class="feature-icon check">✓</div>
-                      50 GB SSD Storage
-                    </li>
-                    <li>
-                      <div class="feature-icon cross">✕</div>
-                      White-Label Control Panel
-                    </li>
-                    <li>
-                      <div class="feature-icon cross">✕</div>
-                      Free SSL for All Accounts
-                    </li>
-                  </ul>
-
-                  <button class="explore-btn">Explore Plans</button>
+                <span class="col-1 plus-sign">+</span>
+                <div class="col-3">
+                  <h2 class="h1 fw-bold mb-1" id="yearlyBasePrice">
+                    $1100 <small class="clr-text fs-3">/yr</small>
+                  </h2>
+                  <small class="clr-text">Base Price</small>
                 </div>
-              </li>
-            </ul>
+                <span class="col-1 plus-sign">+</span>
+                <div class="col-3">
+                  <h2 class="h1 fw-bold mb-1" id="yearlyAdditionalPrice">
+                    $110 <small class="clr-text fs-3">/yr</small>
+                  </h2>
+                  <small class="clr-text">Per Additional Feature</small>
+                </div>
+              </div>
+
+              <!-- Price Slider -->
+              <div class="row justify-content-center price-slider">
+                <div class="col-10 position-relative">
+                  <input
+                    type="range"
+                    class="price-range"
+                    id="yearlyPriceSlider"
+                    min="100"
+                    max="1310"
+                    value="102"
+                  />
+                  <div class="price-tooltip" id="yearlyPriceTooltip">
+                    <span>Total Yearly Price</span>
+                    <span class="fw-bold" id="yearlyTooltipPrice">$102</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Choose Plan Button -->
+              <div class="text-center">
+                <button class="btn primary-btn">Choose Yearly Plan</button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-      <!-- PRICING SECTION STARTS -->
+      <!-- BEST PLAN SECTION ENDS -->
 
       <!-- FEATURES SECTION STARTS -->
       <section id="features-common" class="features-common section-padding">
@@ -860,6 +796,159 @@
         </div>
       </section>
       <!-- COMPARISON SECTION ENDS -->
+
+      <!-- VPS FEATURES SECTION STARTS -->
+      <section id="vps-features" class="vps-features section-padding">
+        <div class="main-container">
+          <div class="content">
+            <h4 class="section-subheading" data-animate="fadeIn">
+              VPS Features
+            </h4>
+            <h2
+              class="section-heading"
+              data-animate="fadeInUp"
+              data-animate-delay="200"
+            >
+              See Games Features
+            </h2>
+            <ul class="cards-container row g-4">
+              <li class="col-md-6 col-lg-4" data-animate="fadeInLeft">
+                <div class="card-item card-hover-effect">
+                  <div class="card-top">
+                    <figure class="flex-center p-5">
+                      <img
+                        src="/images/vps-feature-1.png"
+                        alt="Pic"
+                        loading="lazy"
+                      />
+                    </figure>
+                  </div>
+                  <div class="card-body px-4 py-4">
+                    <h3 class="card-title">Very High Performance</h3>
+                    <p class="card-desc">
+                      We provide powerful VPSservers and advanced data centers
+                      to ensure lightning-fast website loading without
+                      interruptions.
+                    </p>
+                    <button class="btn primary-btn w-100">Start Now</button>
+                  </div>
+                </div>
+              </li>
+              <li class="col-md-6 col-lg-4" data-animate="fadeInUp">
+                <div class="card-item card-hover-effect">
+                  <div class="card-top">
+                    <figure class="flex-center p-5">
+                      <img
+                        src="/images/vps-feature-2.png"
+                        alt="Pic"
+                        loading="lazy"
+                      />
+                    </figure>
+                  </div>
+                  <div class="card-body px-4 py-4">
+                    <h3 class="card-title">Bullet Proof Security</h3>
+                    <p class="card-desc">
+                      We provide powerful VPSservers and advanced data centers
+                      to ensure lightning-fast website loading without
+                      interruptions.
+                    </p>
+                    <button class="btn primary-btn w-100">Start Now</button>
+                  </div>
+                </div>
+              </li>
+              <li class="col-md-6 col-lg-4" data-animate="fadeInRight">
+                <div class="card-item card-hover-effect">
+                  <div class="card-top">
+                    <figure class="flex-center p-5">
+                      <img
+                        src="/images/vps-feature-3.png"
+                        alt="Pic"
+                        loading="lazy"
+                      />
+                    </figure>
+                  </div>
+                  <div class="card-body px-4 py-4">
+                    <h3 class="card-title">100% uptime</h3>
+                    <p class="card-desc">
+                      We provide powerful VPSservers and advanced data centers
+                      to ensure lightning-fast website loading without
+                      interruptions.
+                    </p>
+                    <button class="btn primary-btn w-100">Start Now</button>
+                  </div>
+                </div>
+              </li>
+              <li class="col-md-6 col-lg-4" data-animate="fadeInLeft">
+                <div class="card-item card-hover-effect">
+                  <div class="card-top">
+                    <figure class="flex-center p-5">
+                      <img
+                        src="/images/vps-feature-4.png"
+                        alt="Pic"
+                        loading="lazy"
+                      />
+                    </figure>
+                  </div>
+                  <div class="card-body px-4 py-4">
+                    <h3 class="card-title">Fully Managed hosting</h3>
+                    <p class="card-desc">
+                      We provide powerful VPSservers and advanced data centers
+                      to ensure lightning-fast website loading without
+                      interruptions.
+                    </p>
+                    <button class="btn primary-btn w-100">Start Now</button>
+                  </div>
+                </div>
+              </li>
+              <li class="col-md-6 col-lg-4" data-animate="fadeInUp">
+                <div class="card-item card-hover-effect">
+                  <div class="card-top">
+                    <figure class="flex-center p-5">
+                      <img
+                        src="/images/vps-feature-5.png"
+                        alt="Pic"
+                        loading="lazy"
+                      />
+                    </figure>
+                  </div>
+                  <div class="card-body px-4 py-4">
+                    <h3 class="card-title">Ultra-Fast Performance ِAny Time</h3>
+                    <p class="card-desc">
+                      We provide powerful VPSservers and advanced data centers
+                      to ensure lightning-fast website loading without
+                      interruptions.
+                    </p>
+                    <button class="btn primary-btn w-100">Start Now</button>
+                  </div>
+                </div>
+              </li>
+              <li class="col-md-6 col-lg-4" data-animate="fadeInRight">
+                <div class="card-item card-hover-effect">
+                  <div class="card-top">
+                    <figure class="flex-center p-5">
+                      <img
+                        src="/images/vps-feature-6.png"
+                        alt="Pic"
+                        loading="lazy"
+                      />
+                    </figure>
+                  </div>
+                  <div class="card-body px-4 py-4">
+                    <h3 class="card-title">Unlimited Bandwidth</h3>
+                    <p class="card-desc">
+                      We provide powerful VPSservers and advanced data centers
+                      to ensure lightning-fast website loading without
+                      interruptions.
+                    </p>
+                    <button class="btn primary-btn w-100">Start Now</button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- VPS FEATURES SECTION STARTS -->
 
       <!-- TESTIMONIALS SECTION STARTS -->
       <section
@@ -1356,6 +1445,7 @@
       </div>
     </footer>
 
+    <!-- Bootstrap JS -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -1367,5 +1457,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="src/assets/js/main/app.js" type="module"></script>
+    <script src="src/assets/js/main/price-slider.js" type="module"></script>
   </body>
 </html>

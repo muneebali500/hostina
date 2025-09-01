@@ -88,13 +88,12 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-
     <!-- Custom CSS -->
     <link rel="stylesheet" href="src/assets/styles/main/globals.css" />
     <link rel="stylesheet" href="src/assets/styles/main/header.css" />
     <link rel="stylesheet" href="src/assets/styles/main/footer.css" />
     <link rel="stylesheet" href="src/assets/styles/main/common.css" />
-    <link rel="stylesheet" href="src/assets/styles/main/contact.css" />
+    <link rel="stylesheet" href="src/assets/styles/main/cart.css" />
   </head>
   <body>
     <header id="main-header" class="py-3 shadow-sm d-flex align-items-center">
@@ -295,171 +294,235 @@
       </div>
     </header>
 
-    <main id="contact-main">
+    <main id="cart-configure">
       <!-- Hero Section -->
       <section id="hero-common" class="hero-common flex-center">
-        <div class="container">
+        <div class="main-container">
           <div class="content">
-            <h1 class="hero-heading" data-animate="fadeInDown">Contact us</h1>
+            <h1 class="hero-heading" data-animate="fadeInDown">Cart</h1>
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb flex-center" data-animate="fadeInUp">
                 <li class="breadcrumb-item"><a href="/">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">
-                  Contact
-                </li>
+                <li class="breadcrumb-item active" aria-current="page">Cart</li>
               </ol>
             </nav>
           </div>
         </div>
       </section>
 
-      <!-- Contact Section -->
-      <section
-        id="contact-details-section"
-        class="contact-details-section section-padding"
-      >
+      <section class="cart-configure section-padding" id="cart-configure">
         <div class="main-container">
-          <div class="row g-5">
-            <!-- Contact Information -->
-            <div class="col-md-5" data-animate="fadeInLeft">
-              <div class="contact-info">
-                <h4 class="section-subheading">Contact us</h4>
-                <h2 class="section-heading">Get in Touch</h2>
+          <div class="content row g-5">
+            <aside class="col-md-12 col-xl-3" data-animate="fadeInLeft">
+              <div class="categories-wrapper mb-5">
+                <h3
+                  class="sidebar-title flex-between p-4 fs-3 rounded-4"
+                  style="box-shadow: 8px 0 22px #3636361c"
+                >
+                  Categories
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 
+      .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                      />
+                    </svg>
+                  </span>
+                </h3>
 
-                <!-- Address -->
-                <div class="contact-item d-flex align-items-start mb-4">
-                  <div class="contact-icon">
-                    <i class="fas fa-map-marker-alt"></i>
-                  </div>
-                  <div class="contact-details">
-                    <h5 class="contact-label">Address</h5>
-                    <p class="contact-text">8 Mostafa elnshaar, Cairo Egypt</p>
-                  </div>
+                <ul
+                  class="sidebar-list p-4 rounded-4 fs-4"
+                  style="box-shadow: 0 0 22px #3636361c"
+                >
+                  <li class="sidebar-item p-3">Web Hosting</li>
+                  <li class="sidebar-item p-3">VPS Servers</li>
+                  <li class="sidebar-item p-3">Dedicated Servers</li>
+                  <li class="sidebar-item p-3">Game Servers</li>
+                </ul>
+              </div>
+
+              <div class="currency-wrapper">
+                <h3
+                  class="sidebar-title flex-between p-4 fs-3 rounded-4"
+                  style="box-shadow: 8px 0 22px #3636361c"
+                >
+                  Choose Currency
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 
+      .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                      />
+                    </svg>
+                  </span>
+                </h3>
+
+                <div
+                  class="p-4 rounded-4"
+                  style="box-shadow: 0 0 22px #3636361c"
+                >
+                  <select class="slidebar-list p-3 w-100 rounded-4 fs-4">
+                    <option value="EGP">EGP</option>
+                    <option value="USD">USD</option>
+                    <option value="PKR">PKR</option>
+                  </select>
                 </div>
+              </div>
+            </aside>
 
-                <!-- Phone -->
-                <div class="contact-item d-flex align-items-start mb-4">
-                  <div class="contact-icon">
-                    <i class="fas fa-phone"></i>
-                  </div>
-                  <div class="contact-details">
-                    <h5 class="contact-label">Phone</h5>
-                    <p class="contact-text">+20 100 12 16 321</p>
-                  </div>
-                </div>
+            <div class="content col-md-7 col-xl-6" data-animate="fadeInUp">
+              <h2 class="section-heading mb-2">Configure</h2>
+              <p class="description mb-5 fs-3">
+                Configure your desired options and continue to checkout.
+              </p>
 
-                <!-- Email -->
-                <div class="contact-item d-flex align-items-start mb-4">
-                  <div class="contact-icon">
-                    <i class="fas fa-envelope"></i>
+              <div class="premium-wrap p-5 mt-5 mb-5">
+                <h4 class="mb-3 fs-3 fw-bold">Premium</h4>
+                <ul class="">
+                  <li class="p-2 fs-4">
+                    <strong class="fs-3">10 GB</strong> SSD Storage
+                  </li>
+                  <li class="p-2 fs-4">
+                    <strong class="fs-3">600 GB</strong> Bandwidth
+                  </li>
+                  <li class="p-2 fs-4">
+                    <strong class="fs-3">10</strong> Websites
+                  </li>
+                  <li class="p-2 fs-4">
+                    <strong class="fs-3">Free</strong> SSL Certifications
+                  </li>
+                  <li class="p-2 fs-4">
+                    <strong class="fs-3">Lite Speed</strong> with LSCache
+                  </li>
+                  <li class="p-2 fs-4">
+                    <strong class="fs-3">Free</strong> Domain Included
+                  </li>
+                </ul>
+              </div>
+
+              <div class="billing-wrap mb-5" data-animate="fadeInUp">
+                <h4 class="mb-3 fs-3 fw-bold">Choose Billing Cycle</h4>
+                <select class="bg-light p-4 fs-5 rounded-4 w-100">
+                  <option value="">EGP 2000.00 Annually</option>
+                </select>
+              </div>
+
+              <div class="addon-wrap" data-animate="fadeInUp">
+                <h4 class="mb-3 fs-3 fw-bold">Available Addons</h4>
+                <div class="addon-content px-5 py-4">
+                  <div class="row g-2 mb-4">
+                    <div class="col-9">
+                      <h3 class="mb-3 fs-2 fw-bold">
+                        Protect your site with SSL
+                      </h3>
+                      <p class="fs-5 text-muted">
+                        Add SSL to your web hosting to give visitors confidence
+                        that your website is safe and secure and help build
+                        trust.
+                      </p>
+                    </div>
+                    <div class="col-3">
+                      <img
+                        src="/images/lock-icon.png"
+                        alt="Lock Icon"
+                        class="w-75 d-block ms-auto"
+                      />
+                    </div>
                   </div>
-                  <div class="contact-details">
-                    <h5 class="contact-label">Email</h5>
-                    <p class="contact-text">Hostina@gmail.com</p>
-                  </div>
+
+                  <ul class="row g-4">
+                    <li class="input-group flex-between text-muted fs-5">
+                      <div class="d-flex">
+                        <input
+                          type="radio"
+                          name="addon-radio"
+                          class="me-3 position-relative pt-4"
+                        />
+                        RapidSSL
+                      </div>
+                      <span>$17.95 USD/yr</span>
+                    </li>
+                    <li class="input-group flex-between text-muted fs-5">
+                      <div class="d-flex">
+                        <input
+                          type="radio"
+                          name="addon-radio"
+                          class="me-3 position-relative pt-4"
+                        />
+                        RapidSSL Wildcard
+                      </div>
+                      <span>$17.95 USD/yr</span>
+                    </li>
+                    <li class="input-group flex-between text-muted fs-5">
+                      <div class="d-flex">
+                        <input
+                          type="radio"
+                          name="addon-radio"
+                          class="me-3 position-relative pt-4"
+                        />
+                        RapidSSL Wildcard
+                      </div>
+                      <span>$17.95 USD/yr</span>
+                    </li>
+                    <li class="input-group flex-between text-muted fs-5">
+                      <div class="d-flex">
+                        <input
+                          type="radio"
+                          name="addon-radio"
+                          class="me-3 position-relative pt-4"
+                        />
+                        RapidSSL Wildcard
+                      </div>
+                      <span>$17.95 USD/yr</span>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
 
-            <!-- Contact Form -->
-            <div class="col-md-7" data-animate="fadeInRight">
-              <div class="contact-form-container">
-                <h3 class="form-heading">Get a Free Quote</h3>
+            <div class="col-md-5 col-xl-3" data-animate="fadeInRight">
+              <div class="order-sum-wrap">
+                <h4 class="fs-2 fs-bold text-center p-4">Order Summary</h4>
+                <div class="px-3 py-4">
+                  <p class="fs-3"><strong>Premium</strong></p>
+                  <p class="mb-2 fs-4 text-muted">Web Hosting</p>
 
-                <form id="contact-form" class="contact-form">
-                  <div class="row g-3">
-                    <!-- Name and Email -->
-                    <div class="col-md-6 mb-2">
-                      <input
-                        type="text"
-                        name="name"
-                        class="form-control form-input"
-                        placeholder="Name*"
-                        required
-                      />
-                    </div>
-                    <div class="col-md-6">
-                      <input
-                        type="email"
-                        name="email"
-                        class="form-control form-input"
-                        placeholder="Email*"
-                        required
-                      />
-                    </div>
-
-                    <!-- Phone and Service -->
-                    <div class="col-md-6 mb-2">
-                      <input
-                        type="tel"
-                        name="phone"
-                        class="form-control form-input"
-                        placeholder="Phone*"
-                        required
-                      />
-                    </div>
-                    <div class="col-md-6 mb-2">
-                      <select
-                        name="service"
-                        class="form-control form-input"
-                        required
-                      >
-                        <option value="">Select Service*</option>
-                        <option value="web-hosting">Web Hosting</option>
-                        <option value="domain-registration">
-                          Domain Registration
-                        </option>
-                        <option value="vps-hosting">VPS Hosting</option>
-                        <option value="cloud-hosting">Cloud Hosting</option>
-                        <option value="email-hosting">Email Hosting</option>
-                        <option value="ssl-certificates">
-                          SSL Certificates
-                        </option>
-                        <option value="technical-support">
-                          Technical Support
-                        </option>
-                        <option value="other">Other</option>
-                      </select>
-                    </div>
-
-                    <!-- Message -->
-                    <div class="col-12 mb-4">
-                      <textarea
-                        name="message"
-                        class="form-control form-textarea"
-                        rows="6"
-                        placeholder="Write a Message*"
-                        required
-                      ></textarea>
-                    </div>
-
-                    <!-- Submit Button -->
-                    <div class="col-12">
-                      <button type="submit" class="btn primary-btn">
-                        Send Now
-                      </button>
-                    </div>
-                  </div>
-                </form>
+                  <ul>
+                    <li class="flex-between py-3 fs-4">
+                      Premium <strong>$17.95 USD/yr</strong>
+                    </li>
+                    <li class="flex-between py-3 fs-4">
+                      + SiteLock - Lite <strong>$00.00 USD/yr</strong>
+                    </li>
+                    <li class="flex-between py-3 fs-4">
+                      Setup Fees: <strong>$00.00 USD/yr</strong>
+                    </li>
+                    <li class="flex-between py-3 fs-4">
+                      Annuallly <strong>$119.99 USD/yr</strong>
+                    </li>
+                    <li class="flex-between py-3 fs-4">
+                      Total <strong class="fs-2">$119.99 USD/yr</strong>
+                    </li>
+                  </ul>
+                  <button class="btn primary-btn w-100 mt-4">Continue</button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      <!-- Map Section -->
-      <section id="map-section" class="map-section section-padding">
-        <div class="map-container" data-animate="fadeIn">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3452.8657788088684!2d31.22182!3d30.06263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14584587ac8f291b%3A0x810c2f3fa2a52424!2sCairo%2C%20Egypt!5e0!3m2!1sen!2sus!4v1642567890123!5m2!1sen!2sus"
-            width="100%"
-            height="450"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Hostina Location Map"
-          ></iframe>
         </div>
       </section>
     </main>
@@ -566,7 +629,6 @@
       </div>
     </footer>
 
-    <!-- Bootstrap JS -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

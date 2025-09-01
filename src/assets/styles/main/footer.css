@@ -33,17 +33,34 @@ footer::before {
 }
 
 footer li a {
-  color: var(--color-text);
+  color: var(--color-text-dark);
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: 700;
   padding: 0.4rem 0;
   display: inline-block;
   transition: 0.3s linear;
+  position: relative;
 }
 
-footer li a:hover {
+footer .content li a::before {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #ffffff;
+  transition: var(--transition-base);
+}
+
+footer .content li a:hover {
   color: #fff;
+  transform: translateX(3px);
+}
+
+footer .content li a:hover::before {
+  width: 100%;
 }
 
 footer .nav-title {
@@ -88,7 +105,7 @@ footer .social-item:hover i {
   color: var(--color-text);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   footer .social-links {
     margin-bottom: 2rem;
   }
