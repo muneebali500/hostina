@@ -22,12 +22,17 @@ export default defineConfig({
         dashbMain: resolve(__dirname, "dashboard/main.html"),
         dashbOfferDetails: resolve(__dirname, "dashboard/offer-details.html"),
         dashbNewMember: resolve(__dirname, "dashboard/new-member.html"),
+        dashbNewMemberData: resolve(
+          __dirname,
+          "dashboard/new-member-data.html"
+        ),
         dashbProducts: resolve(__dirname, "dashboard/products.html"),
         dashbInvoices: resolve(__dirname, "dashboard/invoices.html"),
         dashbDomains: resolve(__dirname, "dashboard/domains.html"),
         dashbHosting: resolve(__dirname, "dashboard/hosting.html"),
         dashbDomainSearch: resolve(__dirname, "dashboard/domain-search.html"),
         dashbCart: resolve(__dirname, "dashboard/cart.html"),
+        dashbCartConfigure: resolve(__dirname, "dashboard/cart-configure.html"),
         dashbBlogs: resolve(__dirname, "dashboard/blogs.html"),
         dashbBlogDetails: resolve(__dirname, "dashboard/blog-details.html"),
         dashbCheckout: resolve(__dirname, "dashboard/checkout.html"),
